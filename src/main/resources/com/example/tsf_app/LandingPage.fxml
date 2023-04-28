@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javax.swing.*?>
+<AnchorPane prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tsf_app.tsf_Login_Page_Controller">
+   <children>
+      <BottomNavigation layoutX="20.0" layoutY="527.0">
+          <actionItems>
+              <BottomNavigationButton selected="true" text="Recent">
+                  <graphic>
+                      <Icon content="RECENT_ACTORS" />
+                  </graphic>
+              </BottomNavigationButton>
+              <BottomNavigationButton text="Favourite">
+                  <graphic>
+                      <Icon content="FAVORITE" />
+                  </graphic>
+              </BottomNavigationButton>
+              <BottomNavigationButton text="Nearby">
+                  <graphic>
+                      <Icon content="NEAR_ME" />
+                  </graphic>
+              </BottomNavigationButton>
+              <BottomNavigationButton selected="true" text="Strive">
+                  <graphic>
+                      <Icon content="STRIVE" />
+                  </graphic>
+              </BottomNavigationButton>
+              <BottomNavigationButton text="Home">
+                  <graphic>
+                      <Icon content="HOME" />
+                  </graphic>
+              </BottomNavigationButton>
+          </actionItems>
+      </BottomNavigation>
+   </children>
+</AnchorPane>

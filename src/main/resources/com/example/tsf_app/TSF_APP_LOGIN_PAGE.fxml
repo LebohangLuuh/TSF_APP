@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tsf_app.tsf_Login_Page_Controller">
+    <Label layoutX="128.0" layoutY="87.0" text="LOGIN">
+        <font>
+            <Font name="System Bold" size="18.0" />
+        </font>
+    </Label>
+    <Label layoutX="37.0" layoutY="200.0" text="EMAIL" />
+    <Label layoutX="39.0" layoutY="269.0" text="PASSWORD" />
+    <TextField fx:id="txtEmail" layoutX="37.0" layoutY="224.0" prefHeight="25.0" prefWidth="257.0" promptText="EMAIL" />
+    <Button fx:id="btnLogin" layoutX="39.0" layoutY="366.0" mnemonicParsing="false" onAction="#logIntoApp" prefHeight="25.0" prefWidth="257.0" style="-fx-background-radius: 50;" text="LOGIN" />
+    <Label layoutX="79.0" layoutY="474.0" text="DON'T HAVE AN ACCOUNT?" />
+    <Hyperlink fx:id="sign_Up_Link" layoutX="129.0" layoutY="501.0" onAction="#goToRegisterPage" text="SIGN UP" textFill="#200ee4">
+        <font>
+            <Font name="System Italic" size="12.0" />
+        </font>
+    </Hyperlink>
+    <PasswordField fx:id="PasswordField" layoutX="39.0" layoutY="291.0" prefHeight="25.0" prefWidth="257.0" promptText=" PASSWORD" />
+    <Hyperlink fx:id="forgotPassword_Link" layoutX="175.0" layoutY="322.0" onAction="#goToOTP_Page" text="FORGOT PASSWORD">
+        <font>
+            <Font name="System Italic" size="12.0" />
+        </font>
+    </Hyperlink>
+    <Line endX="156.66668701171875" layoutX="138.0" layoutY="160.0" startX="-100.0" />
+    <Line endX="147.33331298828125" endY="-3.0517578125E-5" layoutX="142.0" layoutY="442.0" startX="-100.0" />
+</AnchorPane>
