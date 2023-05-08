@@ -1,38 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javax.swing.*?>
-<AnchorPane prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tsf_app.tsf_Login_Page_Controller">
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tsf_app.tsf_Login_Page_Controller">
    <children>
-      <BottomNavigation layoutX="20.0" layoutY="527.0">
-          <actionItems>
-              <BottomNavigationButton selected="true" text="Recent">
-                  <graphic>
-                      <Icon content="RECENT_ACTORS" />
-                  </graphic>
-              </BottomNavigationButton>
-              <BottomNavigationButton text="Favourite">
-                  <graphic>
-                      <Icon content="FAVORITE" />
-                  </graphic>
-              </BottomNavigationButton>
-              <BottomNavigationButton text="Nearby">
-                  <graphic>
-                      <Icon content="NEAR_ME" />
-                  </graphic>
-              </BottomNavigationButton>
-              <BottomNavigationButton selected="true" text="Strive">
-                  <graphic>
-                      <Icon content="STRIVE" />
-                  </graphic>
-              </BottomNavigationButton>
-              <BottomNavigationButton text="Home">
-                  <graphic>
-                      <Icon content="HOME" />
-                  </graphic>
-              </BottomNavigationButton>
-          </actionItems>
-      </BottomNavigation>
+      <TabPane layoutX="9.0" layoutY="20.0" pickOnBounds="false" prefHeight="565.0" prefWidth="318.0" side="BOTTOM" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="socialTab">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" rotate="180.0" style="-fx-background-color: WHITE; -fx-background-radius: 10;">
+                     <children>
+                        <Label layoutX="204.0" layoutY="486.0" minWidth="20" rotate="180.0" text="SOCIAL" textFill="BLACK">
+                           <font>
+                              <Font name="System Bold Italic" size="27.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+            </content>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="47.0" nodeOrientation="INHERIT">
+                     <image>
+                        <Image url="@/msg.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+          </Tab>
+            <Tab fx:id="shopTab">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" rotate="180.0" style="-fx-background-color: WHITE; -fx-background-radius: 10;">
+                     <children>
+                        <Label layoutX="204.0" layoutY="483.0" minWidth="20" rotate="180.0" text="SHOP" textFill="ORANGE">
+                           <font>
+                              <Font name="System Bold Italic" size="27.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+               </content>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="47.0">
+                     <image>
+                        <Image url="@/shopping-trolley-icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Tab>
+            <Tab fx:id="homeTab" style="size: 50;">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" rotate="180.0" style="-fx-background-color: WHITE; -fx-background-radius: 10;">
+                     <children>
+                        <Label layoutX="204.0" layoutY="487.0" minWidth="20" rotate="180.0" text="HOME" textFill="BLUE">
+                           <font>
+                              <Font name="System Bold Italic" size="27.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+               </content>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="47.0">
+                     <image>
+                        <Image url="@/pngwing.com.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Tab>
+          <Tab fx:id="streamTab">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" rotate="180.0" style="-fx-background-color: WHITE; -fx-background-radius: 10;">
+                     <children>
+                        <Label layoutX="204.0" layoutY="489.0" minWidth="20" rotate="180.0" text="STREAM" textFill="GREEN">
+                           <font>
+                              <Font name="System Bold Italic" size="27.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+            </content>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="47.0">
+                     <image>
+                        <Image url="@/stream.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+          </Tab>
+            <Tab fx:id="striveTab">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" rotate="180.0" style="-fx-background-color: WHITE; -fx-background-radius: 10;">
+                     <children>
+                        <Label layoutX="204.0" layoutY="483.0" minWidth="20" rotate="180.0" text="STRIVE" textFill="RED">
+                           <font>
+                              <Font name="System Bold Italic" size="27.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+               </content>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="47.0">
+                     <image>
+                        <Image url="@/briefcase.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Tab>
+        </tabs>
+         <effect>
+            <Blend />
+         </effect>
+      </TabPane>
    </children>
 </AnchorPane>

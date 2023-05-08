@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.MenuButton;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -33,35 +34,26 @@ public class TSF_Controller {
     private PasswordField txtConfirmPassword;
 
     @FXML
-    protected void goToSignInPage(){
-
-        try{
-            FXMLLoader fxmlLoader = new FXMLLoader(TSF_Application.class.getResource("/com/example/tsf_app/TSF_APP_LOGIN_PAGE.fxml"));
-            Stage stage = new Stage();
-            Scene scene = new Scene(fxmlLoader.load(), 335, 600);
-            stage.setTitle("LOGIN");
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-
-    }
+    private TextField txtCompany_Name;
     @FXML
-    protected void getData(ActionEvent actionEvent) {
-
-        //TO BE REMOVE BEFORE THE ACTUAL APPS LAUNCHES
-        JOptionPane.showMessageDialog(null,"Fullname                      : "
-                +txtFullname.getText() +
-        "\nSurname                          : "+txtSurname.getText() +
-                "\nEmail                             : "+txtEmail.getText() +
-                "\nMobile Number                : "+txtCellphone.getText() +
-                "\nAddress                         : "+txtAddress.getText() +
-                "\nPassword                        : "+txtPassword.getText() +
-                "\nConfirm Password         : "+txtConfirmPassword.getText());
-
-
-
+    private TextField txtCompany_Reg_Num;
+    @FXML
+    private TextField txtCompany_Email;
+    @FXML
+    private MenuButton txtCompany_Category;
+    @FXML
+    private TextField txtCompany_Phone_Num;
+    @FXML
+    private TextField txtCompany_Address;
+    @FXML
+    private TextField txtCompany_Password;
+    @FXML
+    private TextField txtCompany_Confirm_Password;
+    @FXML
+    private Button company_Btn_Reg;
+    @FXML
+    protected void getData(ActionEvent actionEvent)
+    {
       if(txtFullname.getText().isEmpty() ||txtSurname.getText().isEmpty() ||txtEmail.getText().isEmpty() ||txtAddress.getText().isEmpty() ||txtCellphone.getText().isEmpty() ||txtPassword.getText().isEmpty() ||txtConfirmPassword.getText().isEmpty())
       {
           //ALERT THE USER THAT ALL FIELDS MUST BE FILLED!!
@@ -69,13 +61,49 @@ public class TSF_Controller {
       }
       else
         if (txtPassword.getText().equals(txtConfirmPassword.getText()))
-        {
+        {//validate the users input to minimize possible wrong information
+            if(txtFullname.getText().contains("0-9") || txtSurname.getText().contains("0-9") ||txtCellphone.getText().contains("A-Z")||txtCellphone.getText().length()<10||txtCellphone.getText().length()>12 ||!txtEmail.getText().contains(".") ||!txtEmail.getText().contains("@") )
+            {//alert user of any mistakes done!
+                JOptionPane.showMessageDialog(null,"Please provide valid details in order to become a member..");
+            }
+            else
             JavaPostgreSql.writeToDatabase(txtFullname.getText(), txtSurname.getText(), txtEmail.getText(), txtCellphone.getText(), txtAddress.getText(), txtPassword.getText());
         }
         else
-        {
-            //LET THE USER KNOW THE PASSWORDS DID NOT MATCH
+        {//LET THE USER KNOW THE PASSWORDS DID NOT MATCH
             JOptionPane.showMessageDialog(null, "The Password and Confirm password did not match!!");
         }
+    }
+    public void goToSignInPage() throws IOException
+    {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/tsf_app/TSF_APP_LOGIN_PAGE.fxml"));
+        Stage stage = new Stage();
+        Scene scene = new Scene(fxmlLoader.load(), 335, 600);
+        stage.setTitle("LOGIN");
+        stage.setScene(scene);
+        stage.show();
+    }
+    @FXML
+    protected void getOrganisation_Data ()
+    {
+        if(txtCompany_Name.getText().isEmpty() ||txtCompany_Email.getText().isEmpty()||txtCompany_Reg_Num.getText().isEmpty()||txtCompany_Category.getText().isEmpty()||txtCompany_Phone_Num.getText().isEmpty()||txtCompany_Address.getText().isEmpty()
+                ||txtCompany_Password.getText().isEmpty()||txtCompany_Confirm_Password.getText().isEmpty())
+        {
+            JOptionPane.showMessageDialog(null, "Please fill all the mandatory fields above!!");
+        }
+        else
+            if (txtCompany_Password.getText().equals(txtCompany_Confirm_Password.getText()))  // check if passwords match
+         {
+             if(txtCompany_Name.getText().matches(".*\\d.*") ||!txtCompany_Email.getText().contains(".") || !txtCompany_Email.getText().contains("@") || txtCompany_Phone_Num.getText().length() < 10 || txtCompany_Phone_Num.getText().length() > 12 || txtCompany_Phone_Num.getText().contains("A-Z"))
+             {
+                 JOptionPane.showMessageDialog(null, "Enter valid Organization details..");
+             }
+            else
+            JavaPostgreSql.writeToOrganization_Table(txtCompany_Name.getText(),txtCompany_Email.getText(),txtCompany_Reg_Num.getText(),txtCompany_Category.getText(),txtCompany_Phone_Num.getText(),txtCompany_Address.getText(),txtCompany_Password.getText());
+         }
+      else
+      {
+          JOptionPane.showMessageDialog(null, "The Password and Confirm password did not match!!");
+      }
     }
 }

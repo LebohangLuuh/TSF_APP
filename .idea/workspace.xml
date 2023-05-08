@@ -5,28 +5,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4cfee05-a83c-4b43-b3b3-4f79031f6e6b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysql-connector-j-8.0.33.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/UserType_Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/User_Type_Page.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/tsf_app/LandingPage.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/tsf_app/User_type.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/0/50297c0ffa43b3a7af6d23fd0f7c85c5f592cfed" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/5/0/50297c0ffa43b3a7af6d23fd0f7c85c5f592cfed" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/LandingPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/LandingPage_Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/briefcase.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/tsf_app/Landingpage_Organization.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/face.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/msg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pngwing.com.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/shopping-trolley-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/stream.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c644fe72-d4c4-4ef8-9a8f-af0e0dc154b4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c644fe72-d4c4-4ef8-9a8f-af0e0dc154b4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023_05_03_11_34__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023_05_03_11_34__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023_05_05_11_56_[Changes]/briefcase.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023_05_05_11_56_[Changes]/msg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023_05_05_11_56_[Changes]/pngwing.com.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023_05_05_11_56_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023_05_05_11_56_[Changes]/shopping-trolley-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023_05_05_11_56_[Changes]/stream.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023_05_05_11_56__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/ForgotPassword_Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/ForgotPassword_Page.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/JavaPostgreSql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/JavaPostgreSql.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/Organization_Reg_Page_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/Organization_Reg_Page_Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/TSFAPPLOGINPAGE.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/TSFAPPLOGINPAGE.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/TSF_Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/TSF_Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/TSF_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/TSF_Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/UserType_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/UserType_Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/User_Type_Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/User_Type_Page.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/tsf_Login_Page_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/tsf_Login_Page_Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tsf_app/LandingPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tsf_app/LandingPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tsf_app/TSF_APP_LOGIN_PAGE.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tsf_app/TSF_APP_LOGIN_PAGE.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tsf_app/User_type.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tsf_app/User_type.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tsf_app/registration_Form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tsf_app/registration_Form.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,8 +57,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -60,7 +78,9 @@
     <option name="showPreview" value="true" />
   </component>
   <component name="ProjectId" id="2OgRhBETT49t52t0Ig45gTpFcEc" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -73,7 +93,7 @@
     "database.data.extractors.current.export.id": "SQL Inserts",
     "database.data.extractors.current.id": "SQL Inserts",
     "last_directory_selection": "C:/Users/Khumo/IdeaProjects/TSF_APP/src/main/java/com/example/tsf_app",
-    "last_opened_file_path": "C:/Users/Khumo/Downloads/postgresql-42.6.0.jar",
+    "last_opened_file_path": "C:/Users/Khumo/Downloads/postgresql-42.6.0 (1).jar",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -81,7 +101,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "database.query.execution",
+    "settings.editor.selected.configurable": "project.propVCSSupport.Confirmation",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -103,6 +123,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Khumo\IdeaProjects\TSF_APP\src\main\resources" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Khumo\IdeaProjects\TSF_APP" />
     </key>
@@ -228,7 +251,7 @@ alter table &quot;userDetails&quot;
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/TSF_APP$TSF_Application.ic" NAME="TSF_Application Coverage Results" MODIFIED="1682088879522" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/TSF_APP$TSF_Application.ic" NAME="TSF_Application Coverage Results" MODIFIED="1683101678130" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.tsf_app.*</FILTER>
     </SUITE>
   </component>

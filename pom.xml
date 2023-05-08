@@ -11,30 +11,18 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-<<<<<<< HEAD
-    <junit.version>5.9.1</junit.version>      </properties>
-=======
     <junit.version>5.9.2</junit.version>      </properties>
->>>>>>> 08092c0 (progress on the login page without most verifications)
 
   <dependencies>
     <dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-controls</artifactId>
-<<<<<<< HEAD
-      <version>20-ea+4</version>
-=======
       <version>21-ea+5</version>
->>>>>>> 08092c0 (progress on the login page without most verifications)
     </dependency>
     <dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-fxml</artifactId>
-<<<<<<< HEAD
-      <version>20-ea+4</version>
-=======
       <version>21-ea+5</version>
->>>>>>> 08092c0 (progress on the login page without most verifications)
     </dependency>
                                     
     <dependency>

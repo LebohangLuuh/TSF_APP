@@ -6,22 +6,29 @@
 <?import javafx.scene.text.*?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tsf_app.tsf_Login_Page_Controller">
-    <Label layoutX="128.0" layoutY="87.0" text="LOGIN">
+    <Label layoutX="128.0" layoutY="87.0" text="LOGIN AS:">
         <font>
             <Font name="System Bold" size="18.0" />
         </font>
     </Label>
     <Label layoutX="37.0" layoutY="200.0" text="EMAIL" />
     <Label layoutX="39.0" layoutY="269.0" text="PASSWORD" />
-    <TextField fx:id="txtEmail" layoutX="37.0" layoutY="224.0" prefHeight="25.0" prefWidth="257.0" promptText="EMAIL" />
-    <Button fx:id="btnLogin" layoutX="39.0" layoutY="366.0" mnemonicParsing="false" onAction="#logIntoApp" prefHeight="25.0" prefWidth="257.0" style="-fx-background-radius: 50;" text="LOGIN" />
+    <TextField fx:id="txtEmail" layoutX="37.0" layoutY="224.0" prefHeight="25.0" prefWidth="257.0" promptText="EMAIL - CASE SENSETIVE" />
+    <Button fx:id="btnLogin" layoutX="38.0" layoutY="368.0" mnemonicParsing="false" onAction="#logIntoApp" prefHeight="25.0" prefWidth="119.0" style="-fx-background-radius: 50;" text="INDIVIDUAL">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font></Button>
+    <Button fx:id="btnLogin_Org" layoutX="169.0" layoutY="368.0" mnemonicParsing="false" onAction="#logIntoApp_Org" prefHeight="25.0" prefWidth="119.0" style="-fx-background-radius: 50;" text="ORGANIZATION">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font></Button>
     <Label layoutX="79.0" layoutY="474.0" text="DON'T HAVE AN ACCOUNT?" />
-    <Hyperlink fx:id="sign_Up_Link" layoutX="129.0" layoutY="501.0" onAction="#goToRegisterPage" text="SIGN UP" textFill="#200ee4">
+    <Hyperlink fx:id="sign_Up_Link" layoutX="129.0" layoutY="501.0" onAction="#goToUser_Type_Page" text="SIGN UP" textFill="#200ee4">
         <font>
             <Font name="System Italic" size="12.0" />
         </font>
     </Hyperlink>
-    <PasswordField fx:id="PasswordField" layoutX="39.0" layoutY="291.0" prefHeight="25.0" prefWidth="257.0" promptText=" PASSWORD" />
+    <PasswordField fx:id="PasswordField" layoutX="39.0" layoutY="291.0" prefHeight="25.0" prefWidth="257.0" promptText=" PASSWORD - CASE SENSITIVE" />
     <Hyperlink fx:id="forgotPassword_Link" layoutX="175.0" layoutY="322.0" onAction="#goToOTP_Page" text="FORGOT PASSWORD">
         <font>
             <Font name="System Italic" size="12.0" />
