@@ -1,23 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Blend?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tsf_app.tsf_Login_Page_Controller">
+<AnchorPane prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tsf_app.tsf_Login_Page_Controller">
    <children>
-      <TabPane layoutX="9.0" layoutY="20.0" pickOnBounds="false" prefHeight="565.0" prefWidth="318.0" side="BOTTOM" tabClosingPolicy="UNAVAILABLE">
+      <TabPane layoutX="9.0" layoutY="20.0" pickOnBounds="false" prefHeight="565.0" prefWidth="318.0" side="BOTTOM" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="5.0" AnchorPane.topAnchor="55.0">
         <tabs>
           <Tab fx:id="socialTab">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" rotate="180.0" style="-fx-background-color: WHITE; -fx-background-radius: 10;">
                      <children>
-                        <Label layoutX="204.0" layoutY="486.0" minWidth="20" rotate="180.0" text="SOCIAL" textFill="BLACK">
+                        <Label layoutX="204.0" layoutY="50.0" minWidth="20" rotate="180.0" text="SOCIAL" textFill="BLACK">
                            <font>
                               <Font name="System Bold Italic" size="27.0" />
                            </font>
@@ -36,7 +40,7 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" rotate="180.0" style="-fx-background-color: WHITE; -fx-background-radius: 10;">
                      <children>
-                        <Label layoutX="204.0" layoutY="483.0" minWidth="20" rotate="180.0" text="SHOP" textFill="ORANGE">
+                        <Label layoutX="204.0" layoutY="50.0" minWidth="20" rotate="180.0" text="SHOP" textFill="ORANGE">
                            <font>
                               <Font name="System Bold Italic" size="27.0" />
                            </font>
@@ -53,13 +57,13 @@
             </Tab>
             <Tab fx:id="homeTab" style="size: 50;">
                <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" rotate="180.0" style="-fx-background-color: WHITE; -fx-background-radius: 10;">
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: WHITE; -fx-background-radius: 10;">
                      <children>
-                        <Label layoutX="204.0" layoutY="487.0" minWidth="20" rotate="180.0" text="HOME" textFill="BLUE">
-                           <font>
-                              <Font name="System Bold Italic" size="27.0" />
-                           </font>
-                        </Label>
+                         <Label layoutX="36.0" layoutY="402.0" minWidth="20" text="HOME" textFill="ORANGE">
+                             <font>
+                                 <Font name="System Bold Italic" size="27.0" />
+                             </font>
+                         </Label>
                      </children></AnchorPane>
                </content>
                <graphic>
@@ -74,7 +78,7 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" rotate="180.0" style="-fx-background-color: WHITE; -fx-background-radius: 10;">
                      <children>
-                        <Label layoutX="204.0" layoutY="489.0" minWidth="20" rotate="180.0" text="STREAM" textFill="GREEN">
+                        <Label layoutX="204.0" layoutY="50.0" minWidth="20" rotate="180.0" text="STREAM" textFill="GREEN">
                            <font>
                               <Font name="System Bold Italic" size="27.0" />
                            </font>
@@ -91,13 +95,31 @@
           </Tab>
             <Tab fx:id="striveTab">
                <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" rotate="180.0" style="-fx-background-color: WHITE; -fx-background-radius: 10;">
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: WHITE; -fx-background-radius: 10;">
                      <children>
-                        <Label layoutX="204.0" layoutY="483.0" minWidth="20" rotate="180.0" text="STRIVE" textFill="RED">
+
+                         <Label layoutX="78.0" layoutY="42.0" text="WORK PORTAL" textAlignment="RIGHT" textFill="#1203eb">
                            <font>
-                              <Font name="System Bold Italic" size="27.0" />
-                           </font>
-                        </Label>
+                              <Font name="Book Antiqua Bold Italic" size="20.0" />
+                           </font></Label>
+
+                         <Label layoutX="28.0" layoutY="143.0" text="NAME" />
+                         <Label layoutX="28.0" layoutY="173.0" text="AGE" />
+                         <Label layoutX="28.0" layoutY="203.0" text="EXPERIENCE" />
+                         <Label layoutX="28.0" layoutY="234.0" text="QUALIFICATION" />
+                         <Label layoutX="28.0" layoutY="264.0" text="SKILLS" />
+                         <Label layoutX="28.0" layoutY="294.0" text="CITY" />
+                         <Label layoutX="28.0" layoutY="324.0" text="REFERENCE" />
+                         <Label layoutX="28.0" layoutY="354.0" text="PREVIOUS WORK" />
+                         <TextField fx:id="txtReference" layoutX="157.0" layoutY="324.0" />
+                         <TextField fx:id="txtCity" layoutX="157.0" layoutY="294.0" />
+                         <TextField fx:id="txtSkills" layoutX="157.0" layoutY="264.0" />
+                         <TextField fx:id="txtQualification" layoutX="157.0" layoutY="234.0" />
+                         <TextField fx:id="txtAge" layoutX="157.0" layoutY="173.0" />
+                         <TextField fx:id="txtName" layoutX="157.0" layoutY="143.0" />
+                        <TextField layoutX="157.0" layoutY="203.0" />
+                        <TextField layoutX="158.0" layoutY="354.0" />
+
                      </children></AnchorPane>
                </content>
                <graphic>
@@ -113,5 +135,74 @@
             <Blend />
          </effect>
       </TabPane>
+      <Button fx:id="btnMenu" layoutX="8.0" layoutY="21.0" mnemonicParsing="false" onAction="#openSlider" style="-fx-background-color: TRASNPARENT;" text="MENU">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/MENU.jpg" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+
+           <AnchorPane fx:id="slider" prefHeight="280.0" prefWidth="180.0" AnchorPane.topAnchor="65.0" BorderPane.alignment="CENTER">
+               <children>
+                   <VBox layoutX="23.0" layoutY="70.0" prefHeight="201.0" prefWidth="179.0" style="-fx-background-color: blue;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                       <children>
+                           <Button fx:id="btnProfile" alignment="BASELINE_LEFT" maxHeight="35.0" maxWidth="150.0" mnemonicParsing="false" onAction="#goToUser_Profile" styleClass="sidebarItem" text="PROFILE" textFill="WHITE">
+                               <graphic>
+                                   <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                           <Image url="@/PROFILE.png" />
+                                       </image>
+                                   </ImageView>
+                               </graphic>
+                           </Button>
+                           <Button fx:id="btnShareApp" alignment="BASELINE_LEFT" maxHeight="35.0" maxWidth="150.0" mnemonicParsing="false" styleClass="sidebarItem" text="SHARE APP" textFill="WHITE">
+                               <graphic>
+                                   <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                           <Image url="@/SHARE.png" />
+                                       </image>
+                                   </ImageView>
+                               </graphic>
+                           </Button>
+                           <Button fx:id="btnAbout" alignment="BASELINE_LEFT" maxHeight="35.0" maxWidth="150.0" mnemonicParsing="false" onAction="#appInfo" styleClass="sidebarItem" text="ABOUT" textFill="WHITE">
+                               <graphic>
+                                   <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                           <Image url="@/ABOUT.png" />
+                                       </image>
+                                   </ImageView>
+                               </graphic>
+                           </Button>
+                           <Button fx:id="btnExit" alignment="BASELINE_LEFT" maxHeight="35.0" maxWidth="150.0" mnemonicParsing="false" onAction="#closeApp" styleClass="sidebarItem" text="LOG OUT" textFill="WHITE">
+                               <graphic>
+                                   <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                           <Image url="@/LOG OUT.png" />
+                                       </image>
+                                   </ImageView>
+                               </graphic>
+                           </Button>
+                       </children>
+                   </VBox>
+               </children>
+           </AnchorPane>
+       
+      <Button fx:id="btnMenuBack" layoutX="8.0" layoutY="21.0" mnemonicParsing="false" onAction="#closeSlider" style="-fx-background-color: TRANSPARENT; -fx-background-radius: 50;" text="MENU">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/MENU.jpg" />
+               </image></ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

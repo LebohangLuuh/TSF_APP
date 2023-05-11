@@ -4,47 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4cfee05-a83c-4b43-b3b3-4f79031f6e6b" name="Changes" comment="">
+    <list default="true" id="d4cfee05-a83c-4b43-b3b3-4f79031f6e6b" name="Changes" comment="progress on the login page without password hiding">
+      <change afterPath="$PROJECT_DIR$/.idea/cssdialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/1/21f050d44cb09ad84305c84556aedaf8aeb08fe9" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/0/50297c0ffa43b3a7af6d23fd0f7c85c5f592cfed" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/1/6176604341bf73d176593b9c453e0544d3c3d3fa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/f/af754803463001925ab886a22d501c00448532b2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/2/1/21f050d44cb09ad84305c84556aedaf8aeb08fe9" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/5/0/50297c0ffa43b3a7af6d23fd0f7c85c5f592cfed" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/script.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/LandingPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/LandingPage_Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/briefcase.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/tsf_app/Landingpage_Organization.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/face.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/msg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pngwing.com.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/shopping-trolley-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/stream.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c644fe72-d4c4-4ef8-9a8f-af0e0dc154b4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c644fe72-d4c4-4ef8-9a8f-af0e0dc154b4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023_05_03_11_34__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023_05_03_11_34__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023_05_05_11_56_[Changes]/briefcase.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023_05_05_11_56_[Changes]/msg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023_05_05_11_56_[Changes]/pngwing.com.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023_05_05_11_56_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023_05_05_11_56_[Changes]/shopping-trolley-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023_05_05_11_56_[Changes]/stream.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023_05_05_11_56__Changes_.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/6/1/6176604341bf73d176593b9c453e0544d3c3d3fa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/f/af754803463001925ab886a22d501c00448532b2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ABOUT.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/LOG OUT.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/MENU.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/PROFILE.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/SHARE.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/about_App.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/tsf_app/Style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/logoTSF.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/user_Profile.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/ForgotPassword_Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/ForgotPassword_Page.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/JavaPostgreSql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/JavaPostgreSql.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/Organization_Reg_Page_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/Organization_Reg_Page_Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/TSFAPPLOGINPAGE.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/TSFAPPLOGINPAGE.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/TSF_Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/TSF_Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/TSF_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/TSF_Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/UserType_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/UserType_Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/User_Type_Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/User_Type_Page.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/tsf_Login_Page_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/tsf_Login_Page_Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tsf_app/LandingPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tsf_app/LandingPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tsf_app/TSF_APP_LOGIN_PAGE.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tsf_app/TSF_APP_LOGIN_PAGE.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tsf_app/User_type.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tsf_app/User_type.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tsf_app/registration_Form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tsf_app/registration_Form.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tsf_app/Landingpage_Organization.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tsf_app/Landingpage_Organization.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tsf_app/Organization_Reg_Page.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tsf_app/Organization_Reg_Page.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,48 +74,51 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "database.data.extractors.current.export.id": "SQL Inserts",
-    "database.data.extractors.current.id": "SQL Inserts",
-    "last_directory_selection": "C:/Users/Khumo/IdeaProjects/TSF_APP/src/main/java/com/example/tsf_app",
-    "last_opened_file_path": "C:/Users/Khumo/Downloads/postgresql-42.6.0 (1).jar",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propVCSSupport.Confirmation",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;database.data.extractors.current.export.id&quot;: &quot;SQL Inserts&quot;,
+    &quot;database.data.extractors.current.id&quot;: &quot;SQL Inserts&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/Khumo/IdeaProjects/TSF_APP/src/main/java/com/example/tsf_app&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Khumo/IdeaProjects/TSF_APP/src/main/resources&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;21e011398f50e292d1595e7c6dd43438&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "ChangesTree.GroupingKeys": [
-      "directory",
-      "module"
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;,
+      &quot;module&quot;
     ],
-    "DatabaseDriversLRU": [
-      "oracle",
-      "postgresql"
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;oracle&quot;,
+      &quot;postgresql&quot;
     ],
-    "RunConfigurationTargetLRU": [
-      "c644fe72-d4c4-4ef8-9a8f-af0e0dc154b4",
-      "c644fe72-d4c4-4ef8-9a8f-af0e0dc154b4/database/\"postgres\"/schema/\"public\""
+    &quot;RunConfigurationTargetLRU&quot;: [
+      &quot;c644fe72-d4c4-4ef8-9a8f-af0e0dc154b4&quot;,
+      &quot;c644fe72-d4c4-4ef8-9a8f-af0e0dc154b4/database/\&quot;postgres\&quot;/schema/\&quot;public\&quot;&quot;
     ],
-    "com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect": [
-      "PostgreSQL"
+    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect&quot;: [
+      &quot;PostgreSQL&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Khumo\IdeaProjects\TSF_APP\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Khumo\IdeaProjects\TSF_APP\src\main\resources" />
       <recent name="C:\Users\Khumo\IdeaProjects\TSF_APP" />
     </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
@@ -201,7 +193,17 @@ alter table &quot;userDetails&quot;
       <workItem from="1681980358441" duration="68188000" />
       <workItem from="1682345406116" duration="25631000" />
       <workItem from="1682664382054" duration="4157000" />
+      <workItem from="1683614217794" duration="35100000" />
+      <workItem from="1683726898418" duration="3411000" />
     </task>
+    <task id="LOCAL-00001" summary="progress on the login page without password hiding">
+      <created>1683532933847</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1683532933847</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,10 +245,15 @@ alter table &quot;userDetails&quot;
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="progress on the login page without password hiding" />
+    <option name="LAST_COMMIT_MESSAGE" value="progress on the login page without password hiding" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <default-breakpoints>
         <breakpoint log-message="true" log-stack="true" type="java-exception" />
+        <breakpoint enabled="true" type="javascript-exception" />
       </default-breakpoints>
     </breakpoint-manager>
   </component>

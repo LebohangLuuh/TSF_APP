@@ -85,10 +85,8 @@
       </Label>
       <MenuButton layoutX="156.0" layoutY="260.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="151.0" style="-fx-background-color: WHITE;" text="SELECT CATEGORY">
         <items>
-          <MenuItem mnemonicParsing="false" text="GADGETS" />
-          <MenuItem mnemonicParsing="false" text="FURNITURE" />
-           <MenuItem mnemonicParsing="false" text="APPLIANCE" />
-           <MenuItem mnemonicParsing="false" text="CLOTHING" />
+          <MenuItem mnemonicParsing="false" text="BUSINESS" />
+          <MenuItem mnemonicParsing="false" text="INVESTOR" />
         </items>
       </MenuButton>
    </children>

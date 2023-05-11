@@ -17,7 +17,6 @@ public class JavaPostgreSql
             String user = "postgres"; //username
             String password = "Lebohang"; // password
 
-            String txtFullname = user_fullname;
             String txtSurname = user_surname;
             String txtEmail = user_email;
             String txtCellphone = user_cellphone;
@@ -31,7 +30,7 @@ public class JavaPostgreSql
 
             try(Connection con = DriverManager.getConnection(url,user,password);
                 PreparedStatement pst = con.prepareStatement(query)){
-                pst.setString(1,txtFullname);
+                pst.setString(1, user_fullname);
                 pst.setString(2,txtSurname);
                 pst.setString(3,txtEmail);
                 pst.setString(4,txtCellphone);

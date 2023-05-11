@@ -5,7 +5,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.MenuButton;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -15,40 +14,17 @@ import java.io.IOException;
 
 public class TSF_Controller {
     @FXML
-    private Button btnRegister;
+    private Button btnRegister, btnSignIn;
     @FXML
-    private Button btnSignIn;
+    private TextField txtFullname,txtSurname, txtEmail, txtAddress, txtCellphone;
     @FXML
-    private TextField txtFullname;
-    @FXML
-    private TextField txtSurname;
-    @FXML
-    private TextField txtEmail;
-    @FXML
-    private TextField txtAddress;
-    @FXML
-    private TextField txtCellphone;
-    @FXML
-    private PasswordField txtPassword;
-    @FXML
-    private PasswordField txtConfirmPassword;
+    private PasswordField txtPassword, txtConfirmPassword;
 
     @FXML
-    private TextField txtCompany_Name;
+    private TextField txtCompany_Name, txtCompany_Confirm_Password, txtCompany_Password, txtCompany_Email; // declaring the fields
     @FXML
-    private TextField txtCompany_Reg_Num;
-    @FXML
-    private TextField txtCompany_Email;
-    @FXML
-    private MenuButton txtCompany_Category;
-    @FXML
-    private TextField txtCompany_Phone_Num;
-    @FXML
-    private TextField txtCompany_Address;
-    @FXML
-    private TextField txtCompany_Password;
-    @FXML
-    private TextField txtCompany_Confirm_Password;
+    private TextField txtCompany_Reg_Num, txtCompany_Address, txtCompany_Phone_Num, txtCompany_Category;
+
     @FXML
     private Button company_Btn_Reg;
     @FXML
