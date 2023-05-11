@@ -13,11 +13,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tsf_app.tsf_Login_Page_Controller">
+<AnchorPane prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tsf_app.tsf_Login_Page_Controller">
    <children>
-      <TabPane layoutX="9.0" layoutY="20.0" pickOnBounds="false" prefHeight="565.0" prefWidth="318.0" side="BOTTOM" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="5.0" AnchorPane.topAnchor="55.0">
+      <TabPane layoutX="9.0" layoutY="20.0" pickOnBounds="false" prefHeight="565.0" prefWidth="318.0" side="BOTTOM" style="-fx-background-color: transparent;" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="5.0" AnchorPane.topAnchor="55.0">
         <tabs>
-          <Tab fx:id="socialTab">
+          <Tab fx:id="socialTab" style="-fx-background-color: transparent;">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" rotate="180.0" style="-fx-background-color: WHITE; -fx-background-radius: 10;">
                      <children>
@@ -36,7 +36,7 @@
                   </ImageView>
                </graphic>
           </Tab>
-            <Tab fx:id="shopTab">
+            <Tab fx:id="shopTab" style="-fx-background-color: transparent;">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" rotate="180.0" style="-fx-background-color: WHITE; -fx-background-radius: 10;">
                      <children>
@@ -55,11 +55,11 @@
                   </ImageView>
                </graphic>
             </Tab>
-            <Tab fx:id="homeTab" style="size: 50;">
+            <Tab fx:id="homeTab" style="-fx-background-color: transparent;">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: WHITE; -fx-background-radius: 10;">
                      <children>
-                         <Label layoutX="36.0" layoutY="402.0" minWidth="20" text="HOME" textFill="ORANGE">
+                         <Label layoutX="36.0" layoutY="402.0" minWidth="20" text="HOME" textFill="RED">
                              <font>
                                  <Font name="System Bold Italic" size="27.0" />
                              </font>
@@ -74,7 +74,7 @@
                   </ImageView>
                </graphic>
             </Tab>
-          <Tab fx:id="streamTab">
+          <Tab fx:id="streamTab" style="-fx-background-color: transparent;">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" rotate="180.0" style="-fx-background-color: WHITE; -fx-background-radius: 10;">
                      <children>
@@ -93,7 +93,7 @@
                   </ImageView>
                </graphic>
           </Tab>
-            <Tab fx:id="striveTab">
+            <Tab fx:id="striveTab" style="-fx-background-color: transparent;">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: WHITE; -fx-background-radius: 10;">
                      <children>
@@ -135,7 +135,7 @@
             <Blend />
          </effect>
       </TabPane>
-      <Button fx:id="btnMenu" layoutX="8.0" layoutY="21.0" mnemonicParsing="false" onAction="#openSlider" style="-fx-background-color: TRASNPARENT;" text="MENU">
+      <Button fx:id="btnMenu" layoutX="8.0" layoutY="21.0" mnemonicParsing="false" onAction="#openSlider" style="-fx-background-color: TRANSPARENT;" text="MENU">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
@@ -150,9 +150,9 @@
 
            <AnchorPane fx:id="slider" prefHeight="280.0" prefWidth="180.0" AnchorPane.topAnchor="65.0" BorderPane.alignment="CENTER">
                <children>
-                   <VBox layoutX="23.0" layoutY="70.0" prefHeight="201.0" prefWidth="179.0" style="-fx-background-color: blue;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                   <VBox layoutX="1.0" layoutY="-9.0" prefHeight="201.0" prefWidth="179.0" style="-fx-background-color: grey; -fx-background-radius: 15;" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-9.0">
                        <children>
-                           <Button fx:id="btnProfile" alignment="BASELINE_LEFT" maxHeight="35.0" maxWidth="150.0" mnemonicParsing="false" onAction="#goToUser_Profile" styleClass="sidebarItem" text="PROFILE" textFill="WHITE">
+                           <Button fx:id="btnProfile" alignment="BASELINE_LEFT" maxHeight="35.0" maxWidth="150.0" mnemonicParsing="false" onAction="#goToUser_Profile" style="-fx-background-color: transparent;" styleClass="sidebarItem" text="PROFILE" textFill="WHITE">
                                <graphic>
                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -160,8 +160,11 @@
                                        </image>
                                    </ImageView>
                                </graphic>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
                            </Button>
-                           <Button fx:id="btnShareApp" alignment="BASELINE_LEFT" maxHeight="35.0" maxWidth="150.0" mnemonicParsing="false" styleClass="sidebarItem" text="SHARE APP" textFill="WHITE">
+                           <Button fx:id="btnShareApp" alignment="BASELINE_LEFT" maxHeight="35.0" maxWidth="150.0" mnemonicParsing="false" style="-fx-background-color: transparent;" styleClass="sidebarItem" text="SHARE APP" textFill="WHITE">
                                <graphic>
                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -169,8 +172,11 @@
                                        </image>
                                    </ImageView>
                                </graphic>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
                            </Button>
-                           <Button fx:id="btnAbout" alignment="BASELINE_LEFT" maxHeight="35.0" maxWidth="150.0" mnemonicParsing="false" onAction="#appInfo" styleClass="sidebarItem" text="ABOUT" textFill="WHITE">
+                           <Button fx:id="btnAbout" alignment="BASELINE_LEFT" maxHeight="35.0" maxWidth="150.0" mnemonicParsing="false" onAction="#appInfo" style="-fx-background-color: transparent;" styleClass="sidebarItem" text="ABOUT" textFill="WHITE">
                                <graphic>
                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -178,8 +184,11 @@
                                        </image>
                                    </ImageView>
                                </graphic>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
                            </Button>
-                           <Button fx:id="btnExit" alignment="BASELINE_LEFT" maxHeight="35.0" maxWidth="150.0" mnemonicParsing="false" onAction="#closeApp" styleClass="sidebarItem" text="LOG OUT" textFill="WHITE">
+                           <Button fx:id="btnExit" alignment="BASELINE_LEFT" maxHeight="35.0" maxWidth="150.0" mnemonicParsing="false" onAction="#closeApp" style="-fx-background-color: transparent;" styleClass="sidebarItem" text="LOG OUT" textFill="WHITE">
                                <graphic>
                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -187,6 +196,9 @@
                                        </image>
                                    </ImageView>
                                </graphic>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
                            </Button>
                        </children>
                    </VBox>

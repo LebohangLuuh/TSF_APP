@@ -10,8 +10,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import javax.swing.*;
-import java.io.IOException;
-
+import java.io.IOException; 
 public class TSF_Controller {
     @FXML
     private Button btnRegister, btnSignIn;
@@ -19,17 +18,14 @@ public class TSF_Controller {
     private TextField txtFullname,txtSurname, txtEmail, txtAddress, txtCellphone;
     @FXML
     private PasswordField txtPassword, txtConfirmPassword;
-
     @FXML
     private TextField txtCompany_Name, txtCompany_Confirm_Password, txtCompany_Password, txtCompany_Email; // declaring the fields
     @FXML
     private TextField txtCompany_Reg_Num, txtCompany_Address, txtCompany_Phone_Num, txtCompany_Category;
-
     @FXML
     private Button company_Btn_Reg;
     @FXML
-    protected void getData(ActionEvent actionEvent)
-    {
+    protected void getData(ActionEvent actionEvent) {
       if(txtFullname.getText().isEmpty() ||txtSurname.getText().isEmpty() ||txtEmail.getText().isEmpty() ||txtAddress.getText().isEmpty() ||txtCellphone.getText().isEmpty() ||txtPassword.getText().isEmpty() ||txtConfirmPassword.getText().isEmpty())
       {
           //ALERT THE USER THAT ALL FIELDS MUST BE FILLED!!
@@ -50,8 +46,7 @@ public class TSF_Controller {
             JOptionPane.showMessageDialog(null, "The Password and Confirm password did not match!!");
         }
     }
-    public void goToSignInPage() throws IOException
-    {
+    public void goToSignInPage() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/tsf_app/TSF_APP_LOGIN_PAGE.fxml"));
         Stage stage = new Stage();
         Scene scene = new Scene(fxmlLoader.load(), 335, 600);
@@ -60,8 +55,7 @@ public class TSF_Controller {
         stage.show();
     }
     @FXML
-    protected void getOrganisation_Data ()
-    {
+    protected void getOrganisation_Data () {
         if(txtCompany_Name.getText().isEmpty() ||txtCompany_Email.getText().isEmpty()||txtCompany_Reg_Num.getText().isEmpty()||txtCompany_Category.getText().isEmpty()||txtCompany_Phone_Num.getText().isEmpty()||txtCompany_Address.getText().isEmpty()
                 ||txtCompany_Password.getText().isEmpty()||txtCompany_Confirm_Password.getText().isEmpty())
         {

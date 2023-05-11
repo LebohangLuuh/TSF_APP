@@ -5,35 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4cfee05-a83c-4b43-b3b3-4f79031f6e6b" name="Changes" comment="progress on the login page without password hiding">
-      <change afterPath="$PROJECT_DIR$/.idea/cssdialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/1/21f050d44cb09ad84305c84556aedaf8aeb08fe9" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/0/50297c0ffa43b3a7af6d23fd0f7c85c5f592cfed" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/1/6176604341bf73d176593b9c453e0544d3c3d3fa" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/f/af754803463001925ab886a22d501c00448532b2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/2/1/21f050d44cb09ad84305c84556aedaf8aeb08fe9" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/5/0/50297c0ffa43b3a7af6d23fd0f7c85c5f592cfed" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/6/1/6176604341bf73d176593b9c453e0544d3c3d3fa" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/f/af754803463001925ab886a22d501c00448532b2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/ABOUT.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/LOG OUT.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/MENU.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/PROFILE.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/SHARE.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/about_App.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/tsf_app/Style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/logoTSF.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/user_Profile.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/back_Icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/cam.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/JavaPostgreSql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/JavaPostgreSql.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/TSF_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/TSF_Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/tsf_Login_Page_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/tsf_Login_Page_Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/about_App.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/about_App.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tsf_app/LandingPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tsf_app/LandingPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tsf_app/Landingpage_Organization.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tsf_app/Landingpage_Organization.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tsf_app/Organization_Reg_Page.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tsf_app/Organization_Reg_Page.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/user_Profile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/user_Profile.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,7 +176,8 @@ alter table &quot;userDetails&quot;
       <workItem from="1682345406116" duration="25631000" />
       <workItem from="1682664382054" duration="4157000" />
       <workItem from="1683614217794" duration="35100000" />
-      <workItem from="1683726898418" duration="3411000" />
+      <workItem from="1683726898418" duration="8587000" />
+      <workItem from="1683801424197" duration="7644000" />
     </task>
     <task id="LOCAL-00001" summary="progress on the login page without password hiding">
       <created>1683532933847</created>
@@ -203,7 +186,14 @@ alter table &quot;userDetails&quot;
       <option name="project" value="LOCAL" />
       <updated>1683532933847</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="progress on the login page without password hiding">
+      <created>1683790885412</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1683790885412</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

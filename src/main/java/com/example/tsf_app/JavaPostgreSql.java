@@ -7,7 +7,6 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
 public class JavaPostgreSql
 {
     public static void writeToDatabase(String user_fullname, String user_surname, String user_email, String user_cellphone, String user_address, String user_password)
@@ -44,7 +43,6 @@ public class JavaPostgreSql
                 lgr.log(Level.SEVERE, ex.getMessage(),ex);
             }
         }
-
     public static void writeToOrganization_Table(String company_Name, String company_Email,String company_Reg_Num, String company_Category, String company_Phone_Num, String company_Address, String company_Password) //from organization input page to the database
     {
         //database connection

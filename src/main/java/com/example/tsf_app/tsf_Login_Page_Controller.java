@@ -5,11 +5,15 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import javafx.stage.Window;
 import javafx.util.Duration;
-
 import javax.swing.*;
+import java.io.File;
 import java.io.IOException;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -20,13 +24,13 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 public class tsf_Login_Page_Controller {
     @FXML
-    private Label lblCompanyName;
+    private static Label lblCompanyName;
     @FXML
     private Hyperlink sign_Up_Link;
     @FXML
     private Hyperlink forgotPassword_Link;
     @FXML
-    private Button btnLogin,btnLogin_Org, btnBack;
+    private Button btnLogin,btnLogin_Org, btnBack , btn_Pro_Pic;
     @FXML
     private TextField txtEmail,txtCompany_Email, txtCompany_Name;
     @FXML
@@ -34,11 +38,15 @@ public class tsf_Login_Page_Controller {
     @FXML
     private Label menu;
     @FXML
+    private ImageView img_User_Profile;
+    @FXML
     private Label menuBack;
     @FXML
     private AnchorPane slider;
     @FXML
     private Button btnExit, btnMenuBack, btnMenu;
+    private Window stage;
+    String otpPin;
     @FXML
     protected void logIntoApp() //LOGIN AS AN INDIVIDUAL
     {//database connection
@@ -123,7 +131,7 @@ public class tsf_Login_Page_Controller {
 
                 if (resultSet_Org.next())
                 {
-                  //  lblCompanyName.setText(resultSet_Org.getString("\'company_Name\'"));//automatically set company name // causes error
+                    // lblCompanyName.setText(resultSet_Org.getString("\"company_Name\""));//automatically set company name // causes error
                     JOptionPane.showMessageDialog(null,"Login success!");
                     try
                     {
@@ -149,8 +157,7 @@ public class tsf_Login_Page_Controller {
         }
     }
     @FXML
-    protected void goToOrganizationPage()
-    {
+    protected void goToOrganizationPage() {
         try{
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/tsf_app/Organization_Reg_Page.fxml"));
             Stage stage = new Stage();
@@ -163,7 +170,7 @@ public class tsf_Login_Page_Controller {
         }
     }
     @FXML
-    protected void goToSignInPage(){
+    protected void goToSignInPage() {
         try{
             FXMLLoader fxmlLoader = new FXMLLoader(TSF_Application.class.getResource("/com/example/tsf_app/TSF_APP_LOGIN_PAGE.fxml"));
             Stage stage = new Stage();
@@ -189,8 +196,7 @@ public class tsf_Login_Page_Controller {
         }
     }
     @FXML
-    protected void goToUser_Type_Page()
-    {
+    protected void goToUser_Type_Page() {
         try{
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/tsf_app/User_type.fxml"));
             Stage stage = new Stage();
@@ -203,8 +209,7 @@ public class tsf_Login_Page_Controller {
         }
     }
     @FXML
-    protected void goToUser_Profile()
-    {
+    protected void goToUser_Profile() {
         try{
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/user_Profile.fxml"));
             Stage stage = new Stage();
@@ -216,10 +221,8 @@ public class tsf_Login_Page_Controller {
             throw new RuntimeException(exc);
         }
     }
-    String otpPin;
     @FXML
-    protected void goToOTP_Page()
-    {//generate otp and send it to the user
+    protected void goToOTP_Page() {//generate otp and send it to the user
         int otpDigitsLen = 5;
         String digits = "0123456789";
         Random random = new Random();
@@ -265,7 +268,6 @@ public class tsf_Login_Page_Controller {
             throw new RuntimeException(exc);
         }
     }
-
     @FXML
     protected void goBack() // show brief description about the app
     {
@@ -281,8 +283,27 @@ public class tsf_Login_Page_Controller {
         }
     }
     @FXML
-    protected void openSlider()
-    {
+    private Image profileImage;
+    @FXML
+    protected void choosePro_Pic() {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Choose a profile picture");
+        fileChooser.getExtensionFilters().addAll(
+                new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg"));
+        File selectedFile = fileChooser.showOpenDialog(stage);
+        if (selectedFile != null) {
+            profileImage = new Image(selectedFile.toURI().toString());
+            img_User_Profile.setImage(profileImage);
+        }
+    }
+    public void initialize() {
+        // other initialization code
+        if (profileImage != null) {
+            img_User_Profile.setImage(profileImage);
+        }
+    }
+    @FXML
+    protected void openSlider() {
         if (slider!=null)
             slider.setTranslateX(-180);
         btnMenu.setOnAction(event -> {
@@ -300,8 +321,7 @@ public class tsf_Login_Page_Controller {
         });
     }
     @FXML
-    protected void closeSlider()
-    {
+    protected void closeSlider() {
            // slider.setTranslateX(-180);
         btnMenuBack.setOnAction(event -> {
             TranslateTransition slide = new TranslateTransition();

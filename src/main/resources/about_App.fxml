@@ -9,7 +9,7 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="335.0" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tsf_app.tsf_Login_Page_Controller">
    <children>
-      <ImageView fitHeight="142.0" fitWidth="157.0" layoutX="89.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="142.0" fitWidth="157.0" layoutX="89.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@/logoTSF.jpg" />
          </image>
@@ -41,10 +41,17 @@
             <Font name="Serif Bold" size="24.0" />
          </font>
       </Label>
-      <Button fx:id="btnBack" layoutX="24.0" layoutY="22.0" mnemonicParsing="false" onAction="#goBack" text="BACK" textFill="#1c0dc0">
+      <Button fx:id="btnBack" layoutX="24.0" layoutY="22.0" mnemonicParsing="false" onAction="#goBack" style="-fx-background-color: transparent;" textFill="#1c0dc0">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@back_Icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
       </Button>
    </children>
 </AnchorPane>
