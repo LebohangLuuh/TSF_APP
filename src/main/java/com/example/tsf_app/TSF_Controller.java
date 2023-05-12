@@ -76,4 +76,18 @@ public class TSF_Controller {
           JOptionPane.showMessageDialog(null, "The Password and Confirm password did not match!!");
       }
     }
-}
+  /*  @FXML
+    private void handleEditProfile(ActionEvent event) // had to add at tsf_Login_Page_Controller
+    {
+//get the user input from text fields
+        String fullname = txtFullname.getText().trim();
+        String surname = txtSurname.getText().trim();
+        String email = txtEmail.getText().trim();
+        String cellphone = txtCellphone.getText().trim();
+        String address = txtAddress.getText().trim();
+
+        //update the user details in the database
+        UpdateUserDetails updater = new UpdateUserDetails();
+        updater.editUserDetails(fullname, surname, email, cellphone, address);
+    }*/
+ }

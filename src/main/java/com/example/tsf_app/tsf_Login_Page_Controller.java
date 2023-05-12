@@ -1,24 +1,32 @@
 package com.example.tsf_app;
 
 import javafx.animation.TranslateTransition;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.MenuItem;
+import javafx.scene.control.TextField;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.Clipboard;
+import javafx.scene.input.ClipboardContent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 import javafx.util.Duration;
+
 import javax.swing.*;
+import java.awt.*;
 import java.io.File;
 import java.io.IOException;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.sql.*;
 import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -26,11 +34,13 @@ public class tsf_Login_Page_Controller {
     @FXML
     private static Label lblCompanyName;
     @FXML
+    private MenuItem ShareEmail;
+    @FXML
     private Hyperlink sign_Up_Link;
     @FXML
     private Hyperlink forgotPassword_Link;
     @FXML
-    private Button btnLogin,btnLogin_Org, btnBack , btn_Pro_Pic;
+    private Button btnLogin,btnLogin_Org, btnBack , btn_Pro_Pic, btnEdit_profile;
     @FXML
     private TextField txtEmail,txtCompany_Email, txtCompany_Name;
     @FXML
@@ -44,7 +54,7 @@ public class tsf_Login_Page_Controller {
     @FXML
     private AnchorPane slider;
     @FXML
-    private Button btnExit, btnMenuBack, btnMenu;
+    private Button btnExit, btnMenuBack, btnMenu, btnShareApp;
     private Window stage;
     String otpPin;
     @FXML
@@ -336,5 +346,33 @@ public class tsf_Login_Page_Controller {
             btnMenuBack.setVisible(false);
         });
         });
+    }
+    public void shareAppLink(ActionEvent event) //share app link for downloading
+    {
+        String appLink = "https://play.google.com/store/apps/details?id=com.Lentswe.android.abc"; // replace with actual app download link
+        String message = "Hey, check out this cool app I found! " + appLink;
+        if (Desktop.isDesktopSupported()) {
+            try {
+                Desktop.getDesktop().browse(new URI(appLink));
+            } catch (IOException | URISyntaxException e) {
+                e.printStackTrace();
+            }
+        }
+        else {
+            Clipboard clipboard = Clipboard.getSystemClipboard();
+            ClipboardContent content = new ClipboardContent();
+            content.putString(message);
+            clipboard.setContent(content);
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Share App Link");
+            alert.setHeaderText(null);
+            alert.setContentText("App link copied to clipboard!");
+            alert.showAndWait();
+        }
+    }
+
+    public void handleEditProfile(ActionEvent event) //the copy is at TSF_Controller
+    {
+        //have to create fxml file to update details
     }
 }

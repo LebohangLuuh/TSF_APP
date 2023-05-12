@@ -7,13 +7,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="335.0" style="-fx-background-image: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tsf_app.tsf_Login_Page_Controller">
+<AnchorPane prefHeight="600.0" prefWidth="335.0" style="-fx-background-image: white;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tsf_app.tsf_Login_Page_Controller">
    <children>
       <ImageView fx:id="img_User_Profile" fitHeight="110.0" fitWidth="110.0" layoutX="108.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
-      <Button fx:id="btnEdit_profile" layoutX="43.0" layoutY="288.0" mnemonicParsing="false" prefWidth="120.0" style="-fx-background-radius: 15;" text="EDIT PROFILE">
+      <Button fx:id="btnEdit_profile" layoutX="43.0" layoutY="288.0" mnemonicParsing="false" onAction="#handleEditProfile" prefWidth="120.0" style="-fx-background-radius: 15;" text="EDIT PROFILE">
          <font>
             <Font name="System Bold" size="12.0" />
-         </font>
+      </font>
       </Button>
       <Button fx:id="btnDelete_Account" layoutX="173.0" layoutY="288.0" mnemonicParsing="false" prefWidth="120.0" style="-fx-background-radius: 15;" text="DELETE ACCOUNT">
          <font>

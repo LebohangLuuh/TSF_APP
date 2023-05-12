@@ -10,8 +10,7 @@ import java.util.logging.Logger;
 public class JavaPostgreSql
 {
     public static void writeToDatabase(String user_fullname, String user_surname, String user_email, String user_cellphone, String user_address, String user_password)
-        {
-            //database connection
+        {//database connection
             String url = "jdbc:postgresql://localhost:5432/tsf_Database"; //est connection
             String user = "postgres"; //username
             String password = "Lebohang"; // password
@@ -44,8 +43,7 @@ public class JavaPostgreSql
             }
         }
     public static void writeToOrganization_Table(String company_Name, String company_Email,String company_Reg_Num, String company_Category, String company_Phone_Num, String company_Address, String company_Password) //from organization input page to the database
-    {
-        //database connection
+    {//database connection
         String url = "jdbc:postgresql://localhost:5432/tsf_Database"; //est connection
         String user = "postgres"; //username
         String password = "Lebohang"; // password

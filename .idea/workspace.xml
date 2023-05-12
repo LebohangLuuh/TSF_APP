@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4cfee05-a83c-4b43-b3b3-4f79031f6e6b" name="Changes" comment="progress on the login page without password hiding" />
+    <list default="true" id="d4cfee05-a83c-4b43-b3b3-4f79031f6e6b" name="Changes" comment="progress on the login page without password hiding">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/UpdateUserDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/cssdialects.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/8/88a9255124c95bdc913197c120a8d560edc59c8e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/f/9fe84ebb15faf917b7def6236dba604453cc61e0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/8/8/88a9255124c95bdc913197c120a8d560edc59c8e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/f/9fe84ebb15faf917b7def6236dba604453cc61e0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/JavaPostgreSql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/JavaPostgreSql.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/TSF_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/TSF_Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/tsf_Login_Page_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/tsf_Login_Page_Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tsf_app/LandingPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tsf_app/LandingPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tsf_app/Style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/user_Profile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/user_Profile.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,8 +31,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -94,6 +109,9 @@
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="com.example.tsf_app" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.tsf_app" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.TSF_Application">
     <configuration name="TSFAPPLOGINPAGE" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -166,6 +184,7 @@ alter table &quot;userDetails&quot;
       <workItem from="1683614217794" duration="35100000" />
       <workItem from="1683726898418" duration="8587000" />
       <workItem from="1683801424197" duration="7668000" />
+      <workItem from="1683872892889" duration="14633000" />
     </task>
     <task id="LOCAL-00001" summary="progress on the login page without password hiding">
       <created>1683532933847</created>
@@ -188,7 +207,14 @@ alter table &quot;userDetails&quot;
       <option name="project" value="LOCAL" />
       <updated>1683813767714</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="progress on the login page without password hiding">
+      <created>1683875620633</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1683875620633</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

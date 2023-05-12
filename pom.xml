@@ -297,6 +297,31 @@
           <artifactId>ktdbc-core-js</artifactId>
           <version>1.0.0-alpha3</version>
       </dependency>
+      <dependency>
+          <groupId>io.github.alexmofer.clipboard</groupId>
+          <artifactId>clipboard</artifactId>
+          <version>3.0.1</version>
+      </dependency>
+      <dependency>
+          <groupId>io.github.alexmofer.clipboard</groupId>
+          <artifactId>clipboard</artifactId>
+          <version>3.0.1</version>
+      </dependency>
+      <dependency>
+          <groupId>io.github.alexmofer.clipboard</groupId>
+          <artifactId>clipboard</artifactId>
+          <version>3.0.1</version>
+      </dependency>
+      <dependency>
+          <groupId>io.github.alexmofer.clipboard</groupId>
+          <artifactId>clipboard</artifactId>
+          <version>3.0.1</version>
+      </dependency>
+      <dependency>
+          <groupId>io.github.alexmofer.clipboard</groupId>
+          <artifactId>clipboard</artifactId>
+          <version>3.0.1</version>
+      </dependency>
   </dependencies>
 
   <build>
