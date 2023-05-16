@@ -3,17 +3,9 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.48">
     <root id="1">
       <DateStyle>ymd</DateStyle>
-      <Grants>1||-9223372036854775808|c|G
-1||10|c|G
-1||10|C|G
-1||10|T|G
-4||-9223372036854775808|c|G
-4||10|c|G
-4||10|C|G
-4||10|T|G</Grants>
-      <IntrospectionStateNumber>870</IntrospectionStateNumber>
+      <IntrospectionStateNumber>888</IntrospectionStateNumber>
       <ServerVersion>15.2</ServerVersion>
-      <StartupTime>1683119156</StartupTime>
+      <StartupTime>1683801263</StartupTime>
       <TimeZones>true ACDT
 true ACSST
 false ACST
@@ -823,18 +815,18 @@ false Zulu
 13183||10|C|G
 13183||-9223372036854775808|U|G
 13183||10|U|G</Grants>
-      <IntrospectionStateNumber>870</IntrospectionStateNumber>
+      <IntrospectionStateNumber>888</IntrospectionStateNumber>
       <ObjectId>16394</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
-    <role id="4" parent="1" name="pg_database_owner">
+    <role id="4" parent="1" name="pg_checkpoint">
+      <ObjectId>4544</ObjectId>
+    </role>
+    <role id="5" parent="1" name="pg_database_owner">
       <ObjectId>6171</ObjectId>
     </role>
-    <role id="5" parent="1" name="pg_read_all_data">
-      <ObjectId>6181</ObjectId>
-    </role>
-    <role id="6" parent="1" name="pg_write_all_data">
-      <ObjectId>6182</ObjectId>
+    <role id="6" parent="1" name="pg_execute_server_program">
+      <ObjectId>4571</ObjectId>
     </role>
     <role id="7" parent="1" name="pg_monitor">
       <ObjectId>3373</ObjectId>
@@ -842,29 +834,29 @@ false Zulu
 3375
 3377</RoleGrants>
     </role>
-    <role id="8" parent="1" name="pg_read_all_settings">
+    <role id="8" parent="1" name="pg_read_all_data">
+      <ObjectId>6181</ObjectId>
+    </role>
+    <role id="9" parent="1" name="pg_read_all_settings">
       <ObjectId>3374</ObjectId>
     </role>
-    <role id="9" parent="1" name="pg_read_all_stats">
+    <role id="10" parent="1" name="pg_read_all_stats">
       <ObjectId>3375</ObjectId>
-    </role>
-    <role id="10" parent="1" name="pg_stat_scan_tables">
-      <ObjectId>3377</ObjectId>
     </role>
     <role id="11" parent="1" name="pg_read_server_files">
       <ObjectId>4569</ObjectId>
     </role>
-    <role id="12" parent="1" name="pg_write_server_files">
-      <ObjectId>4570</ObjectId>
-    </role>
-    <role id="13" parent="1" name="pg_execute_server_program">
-      <ObjectId>4571</ObjectId>
-    </role>
-    <role id="14" parent="1" name="pg_signal_backend">
+    <role id="12" parent="1" name="pg_signal_backend">
       <ObjectId>4200</ObjectId>
     </role>
-    <role id="15" parent="1" name="pg_checkpoint">
-      <ObjectId>4544</ObjectId>
+    <role id="13" parent="1" name="pg_stat_scan_tables">
+      <ObjectId>3377</ObjectId>
+    </role>
+    <role id="14" parent="1" name="pg_write_all_data">
+      <ObjectId>6182</ObjectId>
+    </role>
+    <role id="15" parent="1" name="pg_write_server_files">
+      <ObjectId>4570</ObjectId>
     </role>
     <role id="16" parent="1" name="postgres">
       <BypassRls>1</BypassRls>
@@ -7605,7 +7597,7 @@ false Zulu
     <schema id="507" parent="3" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>870</IntrospectionStateNumber>
+      <IntrospectionStateNumber>888</IntrospectionStateNumber>
       <ObjectId>2200</ObjectId>
       <StateNumber>518</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
@@ -7613,7 +7605,7 @@ false Zulu
     <sequence id="508" parent="507" name="userDetailsTable_user_id_seq">
       <DasType>integer|0s</DasType>
       <ObjectId>16424</ObjectId>
-      <SequenceIdentity>1(24)</SequenceIdentity>
+      <SequenceIdentity>1(26)</SequenceIdentity>
       <StartValue>1</StartValue>
       <StateNumber>789</StateNumber>
       <OwnerName>postgres</OwnerName>
@@ -7626,7 +7618,7 @@ false Zulu
     </table>
     <table id="510" parent="507" name="userDetailsTable">
       <ObjectId>16419</ObjectId>
-      <StateNumber>807</StateNumber>
+      <StateNumber>880</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
@@ -7749,7 +7741,15 @@ false Zulu
       <StateNumber>812</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <index id="527" parent="510" name="userDetailsTable_pkey">
+    <column id="527" parent="510" name="user_DOB">
+      <DasType>date|0s</DasType>
+      <DefaultExpression>now()</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>9</Position>
+      <StateNumber>885</StateNumber>
+      <TypeId>1082</TypeId>
+    </column>
+    <index id="528" parent="510" name="userDetailsTable_pkey">
       <ColNames>user_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16453</ObjectId>
@@ -7758,7 +7758,7 @@ false Zulu
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="528" parent="510" name="userDetailsTable_pkey">
+    <key id="529" parent="510" name="userDetailsTable_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16454</ObjectId>
       <Primary>1</Primary>

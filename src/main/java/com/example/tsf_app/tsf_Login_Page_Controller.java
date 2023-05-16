@@ -7,7 +7,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextField;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
@@ -27,26 +26,32 @@ import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.sql.*;
+import java.time.LocalDate;
 import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 public class tsf_Login_Page_Controller {
     @FXML
     private static Label lblCompanyName;
-    @FXML
-    private MenuItem ShareEmail;
     @FXML
     private Hyperlink sign_Up_Link;
     @FXML
     private Hyperlink forgotPassword_Link;
     @FXML
-    private Button btnLogin,btnLogin_Org, btnBack , btn_Pro_Pic, btnEdit_profile;
+    private Button btnLogin;
     @FXML
-    private TextField txtEmail,txtCompany_Email, txtCompany_Name;
+    private Button btnLogin_Org;
+    @FXML
+    private Button btnBack;
+    @FXML
+    private Button btn_Pro_Pic;
+    @FXML
+    private Button btnEdit_profile;
+    @FXML
+    private TextField txtEmail,txtCompany_Email, txtCompany_Name,txtFullname,txtSurname,txtCellphone,txtAddress;
     @FXML
     private PasswordField PasswordField,txtCompany_Password;
-    @FXML
-    private Label menu;
     @FXML
     private ImageView img_User_Profile;
     @FXML
@@ -54,9 +59,13 @@ public class tsf_Login_Page_Controller {
     @FXML
     private AnchorPane slider;
     @FXML
+    private DatePicker txt_DOB, txt_D_O_B;
+    @FXML
     private Button btnExit, btnMenuBack, btnMenu, btnShareApp;
     private Window stage;
     String otpPin;
+    private int user_id;
+
     @FXML
     protected void logIntoApp() //LOGIN AS AN INDIVIDUAL
     {//database connection
@@ -279,7 +288,7 @@ public class tsf_Login_Page_Controller {
         }
     }
     @FXML
-    protected void goBack() // show brief description about the app
+    protected void goBack()
     {
         try{
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("LandingPage.fxml"));
@@ -295,7 +304,8 @@ public class tsf_Login_Page_Controller {
     @FXML
     private Image profileImage;
     @FXML
-    protected void choosePro_Pic() {
+    protected void choosePro_Pic() // go to the device storage to chose picture
+    {
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Choose a profile picture");
         fileChooser.getExtensionFilters().addAll(
@@ -306,7 +316,8 @@ public class tsf_Login_Page_Controller {
             img_User_Profile.setImage(profileImage);
         }
     }
-    public void initialize() {
+    public void initialize() //set profile pic on imageview
+    {
         // other initialization code
         if (profileImage != null) {
             img_User_Profile.setImage(profileImage);
@@ -370,9 +381,51 @@ public class tsf_Login_Page_Controller {
             alert.showAndWait();
         }
     }
-
-    public void handleEditProfile(ActionEvent event) //the copy is at TSF_Controller
+    public void handleEditProfile(ActionEvent event) // wanna update database with edited details from the profile page
     {
-        //have to create fxml file to update details
+
+        String userFullname = txtFullname.getText();
+        String userSurname = txtSurname.getText();
+        String userEmail = txtEmail.getText();
+        String userCellphone = txtCellphone.getText();
+        String userAddress = txtAddress.getText();
+        LocalDate userD_O_B = txt_D_O_B.getValue();
+
+        UpdateUserDetails updateUserDetails = new UpdateUserDetails();
+        updateUserDetails.editUserDetails(userFullname, userSurname, userEmail, userCellphone, userAddress, userD_O_B);
+    }
+    @FXML
+    protected void edit_Profile()// go to edit profile page
+    {
+        try{
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/edit_Profile.fxml"));
+            Stage stage = new Stage();
+            Scene scene = new Scene(fxmlLoader.load(), 335, 600);
+            stage.setTitle("UPDATE DETAILS");
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException exc) {
+            throw new RuntimeException(exc);
+        }
+    }
+   @FXML
+   public void deleteAccount ()// deleting an account button
+    {//database connection
+        String url = "jdbc:postgresql://localhost:5432/tsf_Database"; //est connection
+        String user = "postgres"; //username
+        String password = "Lebohang"; // password
+        
+        try (Connection con = DriverManager.getConnection(url, user, password))
+        {
+            PreparedStatement prepSt = con.prepareStatement("DELETE from public.\"userDetailsTable\" WHERE user_id = ? ");
+            //int userId = Integer.parseInt(String.valueOf(user_id));
+            prepSt.setInt(1,user_id);
+            prepSt.executeUpdate();
+            
+            JOptionPane.showMessageDialog(null, "Account deleted successful!"); //display a message for deleted account
+        } catch (SQLException ex) {
+            Logger lgr = Logger.getLogger(JavaPostgreSql.class.getName());
+            lgr.log(Level.SEVERE, ex.getMessage(), ex);
+        }
     }
 }

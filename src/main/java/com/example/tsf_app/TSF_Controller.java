@@ -5,12 +5,14 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import javax.swing.*;
-import java.io.IOException; 
+import java.io.IOException;
+
 public class TSF_Controller {
     @FXML
     private Button btnRegister, btnSignIn;
@@ -25,10 +27,11 @@ public class TSF_Controller {
     @FXML
     private Button company_Btn_Reg;
     @FXML
+    private DatePicker txt_DOB;
+    @FXML
     protected void getData(ActionEvent actionEvent) {
-      if(txtFullname.getText().isEmpty() ||txtSurname.getText().isEmpty() ||txtEmail.getText().isEmpty() ||txtAddress.getText().isEmpty() ||txtCellphone.getText().isEmpty() ||txtPassword.getText().isEmpty() ||txtConfirmPassword.getText().isEmpty())
-      {
-          //ALERT THE USER THAT ALL FIELDS MUST BE FILLED!!
+      if(txtFullname.getText().isEmpty() ||txtSurname.getText().isEmpty() ||txtEmail.getText().isEmpty() ||txtAddress.getText().isEmpty() ||txtCellphone.getText().isEmpty() ||txtPassword.getText().isEmpty() ||txtConfirmPassword.getText().isEmpty()|| txt_DOB.getValue().toString().isEmpty())
+      {//ALERT THE USER THAT ALL FIELDS MUST BE FILLED!!
           JOptionPane.showMessageDialog(null,"Please fill all the mandatory fields above!!");
       }
       else
@@ -39,7 +42,7 @@ public class TSF_Controller {
                 JOptionPane.showMessageDialog(null,"Please provide valid details in order to become a member..");
             }
             else
-            JavaPostgreSql.writeToDatabase(txtFullname.getText(), txtSurname.getText(), txtEmail.getText(), txtCellphone.getText(), txtAddress.getText(), txtPassword.getText());
+            JavaPostgreSql.writeToDatabase(txtFullname.getText(), txtSurname.getText(), txtEmail.getText(), txtCellphone.getText(), txtAddress.getText(), txtPassword.getText(), txt_DOB.getValue());
         }
         else
         {//LET THE USER KNOW THE PASSWORDS DID NOT MATCH
@@ -76,18 +79,5 @@ public class TSF_Controller {
           JOptionPane.showMessageDialog(null, "The Password and Confirm password did not match!!");
       }
     }
-  /*  @FXML
-    private void handleEditProfile(ActionEvent event) // had to add at tsf_Login_Page_Controller
-    {
-//get the user input from text fields
-        String fullname = txtFullname.getText().trim();
-        String surname = txtSurname.getText().trim();
-        String email = txtEmail.getText().trim();
-        String cellphone = txtCellphone.getText().trim();
-        String address = txtAddress.getText().trim();
 
-        //update the user details in the database
-        UpdateUserDetails updater = new UpdateUserDetails();
-        updater.editUserDetails(fullname, surname, email, cellphone, address);
-    }*/
  }

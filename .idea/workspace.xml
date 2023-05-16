@@ -5,19 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4cfee05-a83c-4b43-b3b3-4f79031f6e6b" name="Changes" comment="progress on the login page without password hiding">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/UpdateUserDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/cssdialects.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/8/88a9255124c95bdc913197c120a8d560edc59c8e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/f/9fe84ebb15faf917b7def6236dba604453cc61e0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/8/8/88a9255124c95bdc913197c120a8d560edc59c8e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/f/9fe84ebb15faf917b7def6236dba604453cc61e0" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/edit_Profile.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c644fe72-d4c4-4ef8-9a8f-af0e0dc154b4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c644fe72-d4c4-4ef8-9a8f-af0e0dc154b4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c644fe72-d4c4-4ef8-9a8f-af0e0dc154b4/storage_v2/_src_/database/tsf_Database.E_VmKA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c644fe72-d4c4-4ef8-9a8f-af0e0dc154b4/storage_v2/_src_/database/tsf_Database.E_VmKA/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/JavaPostgreSql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/JavaPostgreSql.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/TSF_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/TSF_Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/UpdateUserDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/UpdateUserDetails.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/tsf_Login_Page_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/tsf_Login_Page_Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tsf_app/LandingPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tsf_app/LandingPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tsf_app/Style.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/user_Profile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/user_Profile.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,8 +28,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -114,7 +111,7 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.TSF_Application">
-    <configuration name="TSFAPPLOGINPAGE" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="TSFAPPLOGINPAGE" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.tsf_app.TSFAPPLOGINPAGE" />
       <module name="TSF_APP" />
       <extension name="coverage">
@@ -127,7 +124,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TSF_Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="TSF_Application" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.tsf_app.TSF_Application" />
       <module name="TSF_APP" />
       <extension name="coverage">
@@ -163,12 +160,6 @@ alter table &quot;userDetails&quot;
         <option name="Maven.BeforeRunTask" enabled="true" file="$PROJECT_DIR$/pom.xml" goal="" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.TSF_Application" />
-        <item itemvalue="Application.TSFAPPLOGINPAGE" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -184,7 +175,8 @@ alter table &quot;userDetails&quot;
       <workItem from="1683614217794" duration="35100000" />
       <workItem from="1683726898418" duration="8587000" />
       <workItem from="1683801424197" duration="7668000" />
-      <workItem from="1683872892889" duration="14633000" />
+      <workItem from="1683872892889" duration="20529000" />
+      <workItem from="1684133706821" duration="30805000" />
     </task>
     <task id="LOCAL-00001" summary="progress on the login page without password hiding">
       <created>1683532933847</created>
@@ -214,7 +206,14 @@ alter table &quot;userDetails&quot;
       <option name="project" value="LOCAL" />
       <updated>1683875620633</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="progress on the login page without password hiding">
+      <created>1683889705635</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1683889705635</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
