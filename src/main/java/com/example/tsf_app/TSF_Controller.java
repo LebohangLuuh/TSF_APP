@@ -1,5 +1,4 @@
 package com.example.tsf_app;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,7 +11,6 @@ import javafx.stage.Stage;
 
 import javax.swing.*;
 import java.io.IOException;
-
 public class TSF_Controller {
     @FXML
     private Button btnRegister, btnSignIn;
@@ -79,5 +77,4 @@ public class TSF_Controller {
           JOptionPane.showMessageDialog(null, "The Password and Confirm password did not match!!");
       }
     }
-
  }

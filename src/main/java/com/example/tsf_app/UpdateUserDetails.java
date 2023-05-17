@@ -17,7 +17,6 @@ public class UpdateUserDetails {
 
         //prepare the query
         String query = "UPDATE public.\"userDetailsTable\" " +
-              //  SET user_fullname = ?, user_surname = ?, user_address = ?, user_cellphone = ?, cast(\"user_DOB\" as date) = ? " +
                 "SET user_fullname = ?, user_surname = ?, user_address = ?, user_cellphone = ?, \"user_DOB\" = '?' " +
                 "WHERE user_email = ? AND user_id = ?";
 

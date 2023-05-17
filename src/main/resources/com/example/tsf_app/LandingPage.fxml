@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Blend?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
 <AnchorPane prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tsf_app.tsf_Login_Page_Controller">
    <children>
       <TabPane layoutX="9.0" layoutY="20.0" pickOnBounds="false" prefHeight="565.0" prefWidth="318.0" side="BOTTOM" style="-fx-background-color: transparent;" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="5.0" AnchorPane.topAnchor="55.0">
@@ -23,7 +33,7 @@
                <graphic>
                   <ImageView fitHeight="25.0" fitWidth="47.0" nodeOrientation="INHERIT">
                      <image>
-                        <Image url="@/msg.png" />
+                        <Image url="@/social_Icon.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -32,7 +42,7 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" rotate="180.0" style="-fx-background-color: WHITE; -fx-background-radius: 10;">
                      <children>
-                        <Label layoutX="204.0" layoutY="50.0" minWidth="20" rotate="180.0" text="SHOP" textFill="ORANGE">
+                        <Label layoutX="204.0" layoutY="50.0" minWidth="20" rotate="180.0" text="SHOP" textFill="#eb9a0e">
                            <font>
                               <Font name="System Bold Italic" size="27.0" />
                            </font>
@@ -142,7 +152,7 @@
 
            <AnchorPane fx:id="slider" prefHeight="280.0" prefWidth="180.0" AnchorPane.topAnchor="65.0" BorderPane.alignment="CENTER">
                <children>
-                   <VBox layoutX="1.0" layoutY="-9.0" prefHeight="201.0" prefWidth="179.0" style="-fx-background-color: grey; -fx-background-radius: 15;" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-9.0">
+                   <VBox layoutX="1.0" layoutY="-9.0" prefHeight="201.0" prefWidth="179.0" style="-fx-background-color: #192841; -fx-background-radius: 15;" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-9.0">
                        <children>
                            <Button fx:id="btnProfile" alignment="BASELINE_LEFT" maxHeight="35.0" maxWidth="150.0" mnemonicParsing="false" onAction="#goToUser_Profile" style="-fx-background-color: transparent;" styleClass="sidebarItem" text="PROFILE" textFill="WHITE">
                                <graphic>
@@ -156,7 +166,7 @@
                         <Font name="System Bold" size="14.0" />
                      </font>
                            </Button>
-                           <Button fx:id="btnShareApp" alignment="BASELINE_LEFT" maxHeight="35.0" maxWidth="150.0" onAction = "#shareAppLink" mnemonicParsing="false" style="-fx-background-color: transparent;" styleClass="sidebarItem" text="SHARE APP" textFill="WHITE">
+                           <Button fx:id="btnShareApp" alignment="BASELINE_LEFT" maxHeight="35.0" maxWidth="150.0" mnemonicParsing="false" onAction="#shareAppLink" style="-fx-background-color: transparent;" styleClass="sidebarItem" text="SHARE APP" textFill="WHITE">
                                <graphic>
                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -181,11 +191,11 @@
                         <Font name="System Bold" size="14.0" />
                      </font>
                            </Button>
-                           <Button fx:id="btnExit" alignment="BASELINE_LEFT" maxHeight="35.0" maxWidth="150.0" mnemonicParsing="false" onAction="#closeApp" style="-fx-background-color: transparent;" styleClass="sidebarItem" text="LOG OUT" textFill="WHITE">
+                           <Button fx:id="btnMessage" alignment="BASELINE_LEFT" maxHeight="35.0" maxWidth="150.0" mnemonicParsing="false" onAction="#goToChat_Screen" style="-fx-background-color: transparent;" styleClass="sidebarItem" text="CHAT" textFill="WHITE">
                                <graphic>
                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                           <Image url="@/LOG OUT.png" />
+                                           <Image url="@/msg.png" />
                                        </image>
                                    </ImageView>
                                </graphic>
@@ -193,6 +203,29 @@
                         <Font name="System Bold" size="14.0" />
                      </font>
                            </Button>
+                  <Button fx:id="btnExit1" alignment="BASELINE_LEFT" maxHeight="35.0" maxWidth="150.0" mnemonicParsing="false" onAction="#closeApp" style="-fx-background-color: transparent;" styleClass="sidebarItem" text="LOG OUT" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@/LOG OUT.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <MenuButton mnemonicParsing="false" popupSide="LEFT" style="-fx-background-color: TRANSPARENT;" styleClass="sidebarItem" text="POST" textFill="WHITE" wrapText="true">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="HIGHLIGHT" />
+                      <MenuItem mnemonicParsing="false" text="SHOP" />
+                        <MenuItem mnemonicParsing="false" text="STATUS" />
+                        <MenuItem fx:id="btn_Post" mnemonicParsing="false" text="BIO" />
+                    </items>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </MenuButton>
                        </children>
                    </VBox>
                </children>
@@ -209,5 +242,7 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </Button>
+      <TextField layoutX="86.0" layoutY="23.0" prefHeight="25.0" prefWidth="180.0" style="-fx-background-radius: 50;" />
+      <Button fx:id="btnSearch_Bar" alignment="CENTER" contentDisplay="CENTER" layoutX="266.0" layoutY="19.0" minWidth="53.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="63.0" style="-fx-background-color: transparent; -fx-background-radius: 35;" text="SEARCH" textFill="#7d7777" />
    </children>
 </AnchorPane>

@@ -5,17 +5,18 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="335.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tsf_app.tsf_Login_Page_Controller">
+<AnchorPane prefHeight="600.0" prefWidth="335.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tsf_app.tsf_Login_Page_Controller">
    <children>
       <ImageView fx:id="img_User_Profile" fitHeight="110.0" fitWidth="110.0" layoutX="108.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
-      <Button fx:id="btnEdit_profile" layoutX="43.0" layoutY="288.0" mnemonicParsing="false" onAction="#edit_Profile" prefWidth="120.0" style="-fx-background-radius: 15;" text="EDIT PROFILE">
+      <Button fx:id="btnEdit_profile" layoutX="43.0" layoutY="288.0" mnemonicParsing="false" onAction="#edit_Profile" prefWidth="120.0" style="-fx-background-radius: 15;" text="EDIT PROFILE" visible="false">
          <font>
             <Font name="System Bold" size="12.0" />
       </font>
       </Button>
-      <Button fx:id="btnDelete_Account" layoutX="173.0" layoutY="288.0" mnemonicParsing="false" prefWidth="120.0" style="-fx-background-radius: 15;" text="DELETE ACCOUNT">
+      <Button fx:id="btnDelete_Account" layoutX="173.0" layoutY="288.0" mnemonicParsing="false" onAction="#deleteAccount" prefWidth="120.0" style="-fx-background-radius: 15;" text="DELETE ACCOUNT" visible="false">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
@@ -25,7 +26,16 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="lbl_Status_Msg" layoutX="114.0" layoutY="228.0" text="STATUS MESSAGE" textFill="#1029cc">
+      <Button fx:id="btnEdit_Status" layoutX="266.0" layoutY="267.0" minWidth="53.0" mnemonicParsing="false" onAction="#edit_lbl_Status_Msg" prefHeight="31.0" prefWidth="53.0" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="15.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@pen-57.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label fx:id="lbl_Status_Msg" layoutX="42.0" layoutY="273.0" prefHeight="17.0" prefWidth="165.0" text="STATUS MESSAGE" textFill="#1029cc">
          <font>
             <Font name="System Italic" size="12.0" />
          </font>
@@ -47,5 +57,36 @@
             </ImageView>
          </graphic>
       </Button>
+      <Button layoutX="43.0" layoutY="219.0" mnemonicParsing="false" prefWidth="120.0" style="-fx-background-radius: 15; -fx-background-color: TRANSPARENT;" text="FOLLOWERS">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="173.0" layoutY="219.0" mnemonicParsing="false" prefWidth="120.0" style="-fx-background-radius: 15; -fx-background-color: TRANSPARENT;" text="FOLLOWING">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Line endX="191.0" layoutX="144.0" layoutY="303.0" startX="-143.99998474121094" />
+      <Button fx:id="btn_Upload" layoutX="15.0" layoutY="306.0" mnemonicParsing="false" onAction="#choose_Pic_Upload" prefHeight="25.0" prefWidth="25.0" style="-fx-background-radius: 50;">
+         <graphic>
+            <ImageView fitHeight="15.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@cam.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <ImageView fx:id="pic_Upload" fitHeight="87.0" fitWidth="110.0" layoutX="8.0" layoutY="341.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="98.0" layoutY="240.0" text="0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="228.0" layoutY="240.0" text="0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

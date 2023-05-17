@@ -1,0 +1,20 @@
+.alert {
+    -fx-pref-width: 300px;
+    -fx-pref-height: 150px;
+
+    -fx-control-inner-background: yellow;
+    -fx-control-outer-background: red;
+    -fx-text-fill: #1111ef;
+    -fx-padding: 10 20 10 20;
+    -fx-font-weight: bold;
+    -fx-border-radius: 25px;
+    -fx-background-color: white;
+    -fx-font-size: 14px;
+
+}
+.button {
+    -fx-background-color:  #192841;
+    -fx-text-fill: white;
+    -fx-background-radius: 50;
+}
+

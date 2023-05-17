@@ -322,6 +322,66 @@
           <artifactId>clipboard</artifactId>
           <version>3.0.1</version>
       </dependency>
+      <dependency>
+          <groupId>dev.petuska</groupId>
+          <artifactId>kmdc-segmented-button</artifactId>
+          <version>0.1.0</version>
+      </dependency>
+      <dependency>
+          <groupId>dev.petuska</groupId>
+          <artifactId>kmdc-segmented-button</artifactId>
+          <version>0.1.0</version>
+      </dependency>
+      <dependency>
+          <groupId>dev.petuska</groupId>
+          <artifactId>kmdc-segmented-button</artifactId>
+          <version>0.1.0</version>
+      </dependency>
+      <dependency>
+          <groupId>dev.petuska</groupId>
+          <artifactId>kmdc-segmented-button</artifactId>
+          <version>0.1.0</version>
+      </dependency>
+      <dependency>
+          <groupId>dev.petuska</groupId>
+          <artifactId>kmdc-segmented-button</artifactId>
+          <version>0.1.0</version>
+      </dependency>
+      <dependency>
+          <groupId>dev.petuska</groupId>
+          <artifactId>kmdc-button</artifactId>
+          <version>0.1.0</version>
+      </dependency>
+      <dependency>
+          <groupId>dev.petuska</groupId>
+          <artifactId>kmdc-button</artifactId>
+          <version>0.1.0</version>
+      </dependency>
+      <dependency>
+          <groupId>dev.petuska</groupId>
+          <artifactId>kmdc-segmented-button-js</artifactId>
+          <version>0.1.0</version>
+      </dependency>
+      <dependency>
+          <groupId>dev.petuska</groupId>
+          <artifactId>kmdc-segmented-button-js</artifactId>
+          <version>0.1.0</version>
+      </dependency>
+      <dependency>
+          <groupId>dev.petuska</groupId>
+          <artifactId>kmdc-segmented-button-js</artifactId>
+          <version>0.1.0</version>
+      </dependency>
+      <dependency>
+          <groupId>dev.petuska</groupId>
+          <artifactId>kmdc-icon-button</artifactId>
+          <version>0.1.0</version>
+      </dependency>
+      <dependency>
+          <groupId>dev.petuska</groupId>
+          <artifactId>kmdc-icon-button</artifactId>
+          <version>0.1.0</version>
+      </dependency>
   </dependencies>
 
   <build>
