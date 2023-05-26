@@ -7,16 +7,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.geometry.HPos;
 import javafx.geometry.VPos;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.Clipboard;
-import javafx.scene.input.ClipboardContent;
-import javafx.scene.layout.*;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
@@ -24,12 +19,8 @@ import javafx.stage.Window;
 import javafx.util.Duration;
 
 import javax.swing.*;
-import java.awt.*;
 import java.io.File;
 import java.io.IOException;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -422,7 +413,7 @@ public class tsf_Login_Page_Controller {
         });
         });
     }
-    public void shareAppLink(ActionEvent event) //share app link for downloading
+   /* public void shareAppLink(ActionEvent event) //share app link for downloading
     {
         String appLink = "https://play.google.com/store/apps/details?id=com.Lentswe.android.abc"; // replace with actual app download link
         String message = "Hey, check out this cool app I found! " + appLink;
@@ -444,7 +435,7 @@ public class tsf_Login_Page_Controller {
             alert.setContentText("App link copied to clipboard!");
             alert.showAndWait();
         }
-    }
+    }*/
     public void handleEditProfile(ActionEvent event) // want to update database with edited details from the profile page
     {
         String userFullname = txtFullname.getText();
@@ -457,7 +448,7 @@ public class tsf_Login_Page_Controller {
         UpdateUserDetails updateUserDetails = new UpdateUserDetails();
         updateUserDetails.editUserDetails(userFullname, userSurname, userEmail, userCellphone, userAddress, userD_O_B);
     }
-    @FXML
+    /*@FXML
     protected void edit_Profile()// go to edit profile page
     {
         try{
@@ -473,8 +464,8 @@ public class tsf_Login_Page_Controller {
         } catch (IOException exc) {
             throw new RuntimeException(exc);
         }
-    }
-   @FXML
+    }*/
+  /* @FXML
    public void deleteAccount ()// deleting an account button
     {//database connection
         String url = "jdbc:postgresql://localhost:5432/tsf_Database"; //est connection
@@ -509,7 +500,7 @@ public class tsf_Login_Page_Controller {
             Logger lgr = Logger.getLogger(JavaPostgreSql.class.getName());
             lgr.log(Level.SEVERE, ex.getMessage(), ex);
         }
-    }
+    }*/
     @FXML
     private void edit_lbl_Status_Msg()
     {   //update status on the profile and insert into the database

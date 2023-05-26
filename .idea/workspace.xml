@@ -7,25 +7,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4cfee05-a83c-4b43-b3b3-4f79031f6e6b" name="Changes" comment="progress on the login page without password hiding">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/chat_Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/0/50297c0ffa43b3a7af6d23fd0f7c85c5f592cfed" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/1/6176604341bf73d176593b9c453e0544d3c3d3fa" beforeDir="false" />
+    <list default="true" id="d4cfee05-a83c-4b43-b3b3-4f79031f6e6b" name="Changes" comment="progress on the login page without password hiding 26 may 2023">
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/5/0/50297c0ffa43b3a7af6d23fd0f7c85c5f592cfed" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/6/1/6176604341bf73d176593b9c453e0544d3c3d3fa" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.sql" beforeDir="false" afterPath="$PROJECT_DIR$/script.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/TSF_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/TSF_Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/chat_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/chat_Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/tsf_Login_Page_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/tsf_Login_Page_Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/chat_Page.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/chat_Page.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/status_Update.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/status_Update.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/user_Profile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/user_Profile.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +86,7 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "editor.preferences.tabs",
+    "settings.editor.selected.configurable": "editor.preferences.folding",
     "spring.configuration.checksum": "21e011398f50e292d1595e7c6dd43438",
     "vue.rearranger.settings.migration": "true"
   },
@@ -215,7 +203,8 @@ alter table &quot;userDetails&quot;
       <workItem from="1684914741723" duration="1328000" />
       <workItem from="1684916097989" duration="2072000" />
       <workItem from="1685082402133" duration="6674000" />
-      <workItem from="1685092059251" duration="6490000" />
+      <workItem from="1685092059251" duration="11295000" />
+      <workItem from="1685106372716" duration="470000" />
     </task>
     <task id="LOCAL-00001" summary="progress on the login page without password hiding">
       <created>1683532933847</created>
@@ -266,7 +255,14 @@ alter table &quot;userDetails&quot;
       <option name="project" value="LOCAL" />
       <updated>1684304887583</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="progress on the login page without password hiding 26 may 2023">
+      <created>1685099024227</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1685099024227</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -330,7 +326,8 @@ alter table &quot;userDetails&quot;
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="progress on the login page without password hiding" />
-    <option name="LAST_COMMIT_MESSAGE" value="progress on the login page without password hiding" />
+    <MESSAGE value="progress on the login page without password hiding 26 may 2023" />
+    <option name="LAST_COMMIT_MESSAGE" value="progress on the login page without password hiding 26 may 2023" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

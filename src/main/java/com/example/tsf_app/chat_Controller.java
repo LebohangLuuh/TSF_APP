@@ -10,6 +10,7 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
@@ -22,7 +23,10 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.Socket;
 import java.net.URL;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
+
 public class chat_Controller implements Initializable
 {
     @FXML
@@ -33,11 +37,16 @@ public class chat_Controller implements Initializable
     private TextField txt_Type_Msg;
     @FXML
     private VBox vbox_Msg;
+    @FXML
+    private Label lblDate;
     private Client client;
-
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
+        LocalDateTime now = LocalDateTime.now();
+        String timeStamp = now.format(DateTimeFormatter.ofPattern("dd MMMM YYYY -  HH:mm:ss"));
+        lblDate.setText(timeStamp);
+
         try {
             client = new Client(new Socket("localhost",5432));
             System.out.println("Connected to the server");
@@ -67,7 +76,7 @@ public class chat_Controller implements Initializable
                 Text text = new Text(msgToSend);
                 TextFlow textFlow = new TextFlow(text);
 
-                textFlow.setStyle("-fx-border-color: #192841 ;-fx-border-radius: 50;");//colors to be changed later on
+                textFlow.setStyle("-fx-border-color:blue ;-fx-border-radius: 50;");//colors to be changed later on
                 textFlow.setPadding(new Insets(5,10,5,10));
                 //text.setFill(Color.color(0.934,0.945,0.996));
 
@@ -96,7 +105,6 @@ public class chat_Controller implements Initializable
 
         Platform.runLater(() -> vbox.getChildren().add(hBox));
     }
-
     @FXML
     protected void goBack()
     {
@@ -104,7 +112,6 @@ public class chat_Controller implements Initializable
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("LandingPage.fxml"));
             Stage stage = new Stage();
             Scene scene = new Scene(fxmlLoader.load(), 335, 600);
-            stage.setTitle("ABOUT APP");
             //change app icon to logo
             Image image = new Image("logo_transparent_background.png");
             stage.getIcons().add(image);
