@@ -225,7 +225,6 @@ public class tsf_Login_Page_Controller {
             throw new RuntimeException(exc);
         }
     }
-
     @FXML
     protected void goToSignInPage() {
         try{
@@ -448,7 +447,6 @@ public class tsf_Login_Page_Controller {
     }
     public void handleEditProfile(ActionEvent event) // want to update database with edited details from the profile page
     {
-
         String userFullname = txtFullname.getText();
         String userSurname = txtSurname.getText();
         String userEmail = txtEmail.getText();
@@ -512,7 +510,6 @@ public class tsf_Login_Page_Controller {
             lgr.log(Level.SEVERE, ex.getMessage(), ex);
         }
     }
-
     @FXML
     private void edit_lbl_Status_Msg()
     {   //update status on the profile and insert into the database
@@ -557,7 +554,6 @@ public class tsf_Login_Page_Controller {
             //update_Status_Msg(userId, newStatus); // Pass the user ID and new status to the updateStatus() method
         }
     }
-
     @FXML
     private void edit_lbl_Bio_Msg()
     {   //update bio on the profile and insert into the database
@@ -602,7 +598,6 @@ public class tsf_Login_Page_Controller {
             //update_Status_Msg(userId, newStatus); // Pass the user ID and new status to the updateStatus() method
         }
     }
-
    /* public void choose_Pic_Upload(ActionEvent event)
     {
         FileChooser fileChooser = new FileChooser();

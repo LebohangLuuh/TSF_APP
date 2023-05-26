@@ -57,18 +57,18 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="43.0" layoutY="219.0" mnemonicParsing="false" prefWidth="120.0" style="-fx-background-radius: 15; -fx-background-color: TRANSPARENT;" text="FOLLOWERS">
+      <Button layoutX="43.0" layoutY="219.0" mnemonicParsing="false" prefWidth="120.0" style="-fx-background-radius: 15; -fx-background-color: TRANSPARENT;" text="FOLLOWERS" textFill="#918d8d">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button layoutX="173.0" layoutY="219.0" mnemonicParsing="false" prefWidth="120.0" style="-fx-background-radius: 15; -fx-background-color: TRANSPARENT;" text="FOLLOWING">
+      <Button layoutX="173.0" layoutY="219.0" mnemonicParsing="false" prefWidth="120.0" style="-fx-background-radius: 15; -fx-background-color: TRANSPARENT;" text="FOLLOWING" textFill="#918d8d">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
       <Line endX="191.0" layoutX="144.0" layoutY="303.0" startX="-143.99998474121094" />
-      <Button fx:id="btn_Upload" layoutX="15.0" layoutY="306.0" mnemonicParsing="false" onAction="#choose_Pic_Upload" prefHeight="25.0" prefWidth="25.0" style="-fx-background-radius: 50;">
+      <Button fx:id="btn_Upload" layoutX="15.0" layoutY="306.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-background-radius: 50;">
          <graphic>
             <ImageView fitHeight="15.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -78,12 +78,12 @@
          </graphic>
       </Button>
       <ImageView fx:id="pic_Upload" fitHeight="87.0" fitWidth="110.0" layoutX="8.0" layoutY="341.0" pickOnBounds="true" preserveRatio="true" />
-      <Label layoutX="98.0" layoutY="240.0" text="0">
+      <Label layoutX="98.0" layoutY="240.0" text="0" visible="false">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="228.0" layoutY="240.0" text="0">
+      <Label layoutX="228.0" layoutY="240.0" text="0" visible="false">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>

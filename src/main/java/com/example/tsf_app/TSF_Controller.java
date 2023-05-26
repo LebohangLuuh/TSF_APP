@@ -7,6 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import javax.swing.*;
@@ -19,7 +20,7 @@ public class TSF_Controller {
     @FXML
     private PasswordField txtPassword, txtConfirmPassword;
     @FXML
-    private TextField txtCompany_Name, txtCompany_Confirm_Password, txtCompany_Password, txtCompany_Email; // declaring the fields
+    private TextField txtCompany_Name, txtCompany_Confirm_Password, txtCompany_Password, txtCompany_Email;
     @FXML
     private TextField txtCompany_Reg_Num, txtCompany_Address, txtCompany_Phone_Num, txtCompany_Category;
     @FXML
@@ -52,6 +53,9 @@ public class TSF_Controller {
         Stage stage = new Stage();
         Scene scene = new Scene(fxmlLoader.load(), 335, 600);
         stage.setTitle("LOGIN");
+        //change app icon to logo
+        Image image = new Image("logo_transparent_background.png");
+        stage.getIcons().add(image);
         stage.setScene(scene);
         stage.show();
     }
