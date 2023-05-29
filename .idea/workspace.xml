@@ -7,13 +7,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4cfee05-a83c-4b43-b3b3-4f79031f6e6b" name="Changes" comment="progress on the login page without password hiding 26 may 2023">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+    <list default="true" id="d4cfee05-a83c-4b43-b3b3-4f79031f6e6b" name="Changes" comment="progress on the login APP on 31 May 2023 changed the register,POSTING PAGE and database">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/chat_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/chat_Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/tsf_Login_Page_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/tsf_Login_Page_Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/chat_Page.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/chat_Page.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +24,7 @@
       <list>
         <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -46,6 +43,9 @@
         <option name="url" value="https://github.com/LebohangLuuh/TSF_APP.git" />
       </UrlAndAccount>
     </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/example/tsf_app/Client.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -86,7 +86,7 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "editor.preferences.folding",
+    "settings.editor.selected.configurable": "web.server",
     "spring.configuration.checksum": "21e011398f50e292d1595e7c6dd43438",
     "vue.rearranger.settings.migration": "true"
   },
@@ -109,6 +109,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.tsf_app" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Khumo\IdeaProjects\TSF_APP\target\classes\com\example\tsf_app" />
       <recent name="C:\Users\Khumo\IdeaProjects\TSF_APP\src\main\resources" />
@@ -204,7 +207,11 @@ alter table &quot;userDetails&quot;
       <workItem from="1684916097989" duration="2072000" />
       <workItem from="1685082402133" duration="6674000" />
       <workItem from="1685092059251" duration="11295000" />
-      <workItem from="1685106372716" duration="470000" />
+      <workItem from="1685106372716" duration="3299000" />
+      <workItem from="1685343970366" duration="22560000" />
+      <workItem from="1685370114548" duration="215000" />
+      <workItem from="1685428282020" duration="18339000" />
+      <workItem from="1685515259948" duration="25053000" />
     </task>
     <task id="LOCAL-00001" summary="progress on the login page without password hiding">
       <created>1683532933847</created>
@@ -262,7 +269,56 @@ alter table &quot;userDetails&quot;
       <option name="project" value="LOCAL" />
       <updated>1685099024227</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="progress on the login page without password hiding 26 may 2023">
+      <created>1685106907774</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1685106907774</updated>
+    </task>
+    <task id="LOCAL-00010" summary="progress on the login page without password hiding 29 may 2023 changed the register and database">
+      <created>1685429398268</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1685429398268</updated>
+    </task>
+    <task id="LOCAL-00011" summary="progress on the login page without password hiding 29 may 2023 changed the register and database">
+      <created>1685429416609</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1685429416609</updated>
+    </task>
+    <task id="LOCAL-00012" summary="progress on the login page without password hiding 30 may 2023 changed the register and database">
+      <created>1685444040196</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1685444040196</updated>
+    </task>
+    <task id="LOCAL-00013" summary="progress on the login page without password hiding on 30 may 2023 changed the register and database">
+      <created>1685444385530</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1685444385530</updated>
+    </task>
+    <task id="LOCAL-00014" summary="progress on the login APP on 31 May 2023 changed the register,POSTING PAGE and database">
+      <created>1685520289100</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1685520289100</updated>
+    </task>
+    <task id="LOCAL-00015" summary="progress on the login APP on 31 May 2023 changed the register,POSTING PAGE and database">
+      <created>1685538366259</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1685538366259</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -327,13 +383,17 @@ alter table &quot;userDetails&quot;
   <component name="VcsManagerConfiguration">
     <MESSAGE value="progress on the login page without password hiding" />
     <MESSAGE value="progress on the login page without password hiding 26 may 2023" />
-    <option name="LAST_COMMIT_MESSAGE" value="progress on the login page without password hiding 26 may 2023" />
+    <MESSAGE value="progress on the login page without password hiding 29 may 2023 changed the register and database" />
+    <MESSAGE value="progress on the login page without password hiding 30 may 2023 changed the register and database" />
+    <MESSAGE value="progress on the login page without password hiding on 30 may 2023 changed the register and database" />
+    <MESSAGE value="progress on the login APP on 31 May 2023 changed the register,POSTING PAGE and database" />
+    <option name="LAST_COMMIT_MESSAGE" value="progress on the login APP on 31 May 2023 changed the register,POSTING PAGE and database" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <default-breakpoints>
         <breakpoint log-message="true" log-stack="true" type="java-exception" />
-        <breakpoint enabled="true" type="javascript-exception" />
+        <breakpoint enabled="true" log-message="true" log-stack="true" type="javascript-exception" />
       </default-breakpoints>
     </breakpoint-manager>
   </component>

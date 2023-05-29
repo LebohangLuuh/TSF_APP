@@ -166,7 +166,7 @@
                         <Font name="System Bold" size="14.0" />
                      </font>
                            </Button>
-                           <Button fx:id="btnShareApp" alignment="BASELINE_LEFT" maxHeight="35.0" maxWidth="150.0" mnemonicParsing="false" onAction="#shareAppLink" style="-fx-background-color: transparent;" styleClass="sidebarItem" text="SHARE APP" textFill="WHITE">
+                           <Button fx:id="btnShareApp" alignment="BASELINE_LEFT" maxHeight="35.0" maxWidth="150.0" mnemonicParsing="false" style="-fx-background-color: transparent;" styleClass="sidebarItem" text="SHARE APP" textFill="WHITE">
                                <graphic>
                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -230,7 +230,7 @@
                    </VBox>
                </children>
            </AnchorPane>
-       
+
       <Button fx:id="btnMenuBack" layoutX="8.0" layoutY="21.0" mnemonicParsing="false" onAction="#closeSlider" style="-fx-background-color: TRANSPARENT; -fx-background-radius: 50;" text="MENU">
          <graphic>
             <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">

@@ -3,6 +3,7 @@ package com.example.tsf_app;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -13,6 +14,8 @@ public class TSF_Application extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(TSF_Application.class.getResource("/com/example/tsf_app/TSF_APP_LOGIN_PAGE.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 335, 600);
         stage.setTitle("REGISTRATION");
+        Image image = new Image("logo_transparent_background.png");
+        stage.getIcons().add(image);
         stage.setScene(scene);
         stage.show();
     }

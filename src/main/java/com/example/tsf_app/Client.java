@@ -1,13 +1,13 @@
 package com.example.tsf_app;
 
 import javafx.scene.layout.VBox;
+
 import java.io.*;
-import java.net.ServerSocket;
 import java.net.Socket;
 
 public class Client {
     private Socket socket;
-    private ServerSocket serverSocket;
+    //private ServerSocket serverSocket;
     private BufferedReader bufferedReader;
     private BufferedWriter bufferedWriter;
 
@@ -44,6 +44,7 @@ public class Client {
             public void run() {
                 while (socket.isConnected()) {
                     try {
+                   // String msgFromServer = objectInputStream.readUTF();//alt of the bottom line
                         String msgFromServer = bufferedReader.readLine();
                         chat_Controller.addLabel(msgFromServer, vBox);
                     } catch (IOException e) {
@@ -56,6 +57,29 @@ public class Client {
             }
         }).start();
     }
+
+   /* public void receiveMsgFromServer(VBox vbox) {
+        try {
+            ObjectInputStream objectInputStream = new ObjectInputStream(socket.getInputStream());
+            while (true) {
+                String msgFromServer = objectInputStream.readUTF();
+                chat_Controller.addLabel(msgFromServer, vbox);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            // Handle socket reset error
+            if(e instanceof SocketException && e.getMessage().equals("Connection reset")) {
+            // Reconnect to the server
+                try {
+                    socket = new Socket("localhost", 1234);
+            // Call receiveMsgFromServer() recursively to start receiving messages again
+                    receiveMsgFromServer(vbox);
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                }
+            }
+        }
+    }*/
     public void closeAll(Socket socket, BufferedReader bufferedReader, BufferedWriter bufferedWriter) {
         try {
             if (socket != null) {
