@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.MenuButton?>
-<?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.Tab?>
-<?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.effect.Blend?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -15,234 +9,132 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tsf_app.tsf_Login_Page_Controller">
-   <children>
-      <TabPane layoutX="9.0" layoutY="20.0" pickOnBounds="false" prefHeight="565.0" prefWidth="318.0" side="BOTTOM" style="-fx-background-color: transparent;" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="5.0" AnchorPane.topAnchor="55.0">
-        <tabs>
-          <Tab fx:id="socialTab" style="-fx-background-color: transparent;">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" rotate="180.0" style="-fx-background-color: WHITE; -fx-background-radius: 10;">
-                     <children>
-                        <Label layoutX="204.0" layoutY="50.0" minWidth="20" rotate="180.0" text="SOCIAL" textFill="BLACK">
-                           <font>
-                              <Font name="System Bold Italic" size="27.0" />
-                           </font>
-                        </Label>
-                     </children></AnchorPane>
-            </content>
-               <graphic>
-                  <ImageView fitHeight="25.0" fitWidth="47.0" nodeOrientation="INHERIT">
-                     <image>
-                        <Image url="@/social_Icon.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-          </Tab>
-            <Tab fx:id="shopTab" style="-fx-background-color: transparent;">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" rotate="180.0" style="-fx-background-color: WHITE; -fx-background-radius: 10;">
-                     <children>
-                        <Label layoutX="204.0" layoutY="50.0" minWidth="20" rotate="180.0" text="SHOP" textFill="#eb9a0e">
-                           <font>
-                              <Font name="System Bold Italic" size="27.0" />
-                           </font>
-                        </Label>
-                     </children></AnchorPane>
-               </content>
-               <graphic>
-                  <ImageView fitHeight="25.0" fitWidth="47.0">
-                     <image>
-                        <Image url="@/shopping-trolley-icon.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Tab>
-            <Tab fx:id="homeTab" style="-fx-background-color: transparent;">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: WHITE; -fx-background-radius: 10;">
-                     <children>
-                         <Label layoutX="36.0" layoutY="402.0" minWidth="20" text="HOME" textFill="RED">
-                             <font>
-                                 <Font name="System Bold Italic" size="27.0" />
-                             </font>
-                         </Label>
-                     </children></AnchorPane>
-               </content>
-               <graphic>
-                  <ImageView fitHeight="25.0" fitWidth="47.0">
-                     <image>
-                        <Image url="@/pngwing.com.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Tab>
-          <Tab fx:id="streamTab" style="-fx-background-color: transparent;">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" rotate="180.0" style="-fx-background-color: WHITE; -fx-background-radius: 10;">
-                     <children>
-                        <Label layoutX="204.0" layoutY="50.0" minWidth="20" rotate="180.0" text="STREAM" textFill="GREEN">
-                           <font>
-                              <Font name="System Bold Italic" size="27.0" />
-                           </font>
-                        </Label>
-                     </children></AnchorPane>
-            </content>
-               <graphic>
-                  <ImageView fitHeight="25.0" fitWidth="47.0">
-                     <image>
-                        <Image url="@/stream.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-          </Tab>
-            <Tab fx:id="striveTab" style="-fx-background-color: transparent;">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: WHITE; -fx-background-radius: 10;">
-                     <children>
+<AnchorPane prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tsf_app.tsf_Login_Page_Controller">
+    <children>
+        <Button fx:id="btnMenu" layoutX="8.0" layoutY="21.0" mnemonicParsing="false" onAction="#openSlider" style="-fx-background-color: TRANSPARENT;" text="MENU">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+            <graphic>
+                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@/MENU.jpg" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
 
-                         <Label layoutX="78.0" layoutY="42.0" text="WORK PORTAL" textAlignment="RIGHT" textFill="#1203eb">
-                           <font>
-                              <Font name="Book Antiqua Bold Italic" size="20.0" />
-                           </font></Label>
+        <AnchorPane fx:id="slider" prefHeight="280.0" prefWidth="180.0" AnchorPane.topAnchor="65.0" BorderPane.alignment="CENTER">
+            <children>
+                <VBox layoutX="1.0" layoutY="-9.0" prefHeight="201.0" prefWidth="179.0" style="-fx-background-color: #192841; -fx-background-radius: 15;" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-9.0">
+                    <children>
+                        <Button fx:id="btnProfile" alignment="BASELINE_LEFT" maxHeight="35.0" maxWidth="150.0" mnemonicParsing="false" onAction="#goToUser_Profile" style="-fx-background-color: transparent;" styleClass="sidebarItem" text="PROFILE" textFill="WHITE">
+                            <graphic>
+                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@/PROFILE.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btnH_Lights" alignment="BASELINE_LEFT" maxHeight="35.0" maxWidth="150.0" mnemonicParsing="false" style="-fx-background-color: transparent;" styleClass="sidebarItem" text="STATUS" textFill="WHITE">
+                            <graphic>
+                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" />
+                            </graphic>
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btnMessage" alignment="BASELINE_LEFT" maxHeight="35.0" maxWidth="150.0" mnemonicParsing="false" onAction="#goToChat_Screen" style="-fx-background-color: transparent;" styleClass="sidebarItem" text="CHAT" textFill="WHITE">
+                            <graphic>
+                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@/msg.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btnShop" alignment="BASELINE_LEFT" maxHeight="35.0" maxWidth="150.0" mnemonicParsing="false" style="-fx-background-color: transparent;" styleClass="sidebarItem" text="SHOP" textFill="WHITE">
+                            <graphic>
+                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@/shopping-trolley-icon.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btnFeed" alignment="BASELINE_LEFT" maxHeight="35.0" maxWidth="150.0" mnemonicParsing="false" onAction="#goTo_Feed_Page" style="-fx-background-color: transparent;" styleClass="sidebarItem" text="FEED" textFill="WHITE">
+                            <graphic>
+                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" />
+                            </graphic>
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btnSettings" alignment="BASELINE_LEFT" maxHeight="35.0" maxWidth="150.0" mnemonicParsing="false" style="-fx-background-color: transparent;" styleClass="sidebarItem" text="SETTINGS" textFill="WHITE">
+                            <graphic>
+                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@/settings.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Button>
 
-                         <Label layoutX="28.0" layoutY="143.0" text="NAME" />
-                         <Label layoutX="28.0" layoutY="173.0" text="AGE" />
-                         <Label layoutX="28.0" layoutY="203.0" text="EXPERIENCE" />
-                         <Label layoutX="28.0" layoutY="234.0" text="QUALIFICATION" />
-                         <Label layoutX="28.0" layoutY="264.0" text="SKILLS" />
-                         <Label layoutX="28.0" layoutY="294.0" text="CITY" />
-                         <Label layoutX="28.0" layoutY="324.0" text="REFERENCE" />
-                         <Label layoutX="28.0" layoutY="354.0" text="PREVIOUS WORK" />
-                         <TextField fx:id="txtReference" layoutX="157.0" layoutY="324.0" />
-                         <TextField fx:id="txtCity" layoutX="157.0" layoutY="294.0" />
-                         <TextField fx:id="txtSkills" layoutX="157.0" layoutY="264.0" />
-                         <TextField fx:id="txtQualification" layoutX="157.0" layoutY="234.0" />
-                         <TextField fx:id="txtAge" layoutX="157.0" layoutY="173.0" />
-                         <TextField fx:id="txtName" layoutX="157.0" layoutY="143.0" />
-                        <TextField layoutX="157.0" layoutY="203.0" />
-                        <TextField layoutX="158.0" layoutY="354.0" />
+                        <Button fx:id="btnAbout" alignment="BASELINE_LEFT" maxHeight="35.0" maxWidth="150.0" mnemonicParsing="false" onAction="#appInfo" style="-fx-background-color: transparent;" styleClass="sidebarItem" text="ABOUT" textFill="WHITE">
+                            <graphic>
+                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@/ABOUT.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btnExit" alignment="BASELINE_LEFT" maxHeight="35.0" maxWidth="150.0" mnemonicParsing="false" onAction="#closeApp" style="-fx-background-color: transparent;" styleClass="sidebarItem" text="LOG OUT" textFill="WHITE">
+                            <graphic>
+                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@/LOG OUT.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </VBox>
+            </children>
+        </AnchorPane>
 
-                     </children></AnchorPane>
-               </content>
-               <graphic>
-                  <ImageView fitHeight="25.0" fitWidth="47.0">
-                     <image>
-                        <Image url="@/briefcase.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Tab>
-        </tabs>
-         <effect>
-            <Blend />
-         </effect>
-      </TabPane>
-      <Button fx:id="btnMenu" layoutX="8.0" layoutY="21.0" mnemonicParsing="false" onAction="#openSlider" style="-fx-background-color: TRANSPARENT;" text="MENU">
-         <font>
-            <Font name="System Bold" size="13.0" />
-         </font>
-         <graphic>
-            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@/MENU.jpg" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Button>
-
-           <AnchorPane fx:id="slider" prefHeight="280.0" prefWidth="180.0" AnchorPane.topAnchor="65.0" BorderPane.alignment="CENTER">
-               <children>
-                   <VBox layoutX="1.0" layoutY="-9.0" prefHeight="201.0" prefWidth="179.0" style="-fx-background-color: #192841; -fx-background-radius: 15;" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-9.0">
-                       <children>
-                           <Button fx:id="btnProfile" alignment="BASELINE_LEFT" maxHeight="35.0" maxWidth="150.0" mnemonicParsing="false" onAction="#goToUser_Profile" style="-fx-background-color: transparent;" styleClass="sidebarItem" text="PROFILE" textFill="WHITE">
-                               <graphic>
-                                   <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                           <Image url="@/PROFILE.png" />
-                                       </image>
-                                   </ImageView>
-                               </graphic>
-                     <font>
-                        <Font name="System Bold" size="14.0" />
-                     </font>
-                           </Button>
-                           <Button fx:id="btnShareApp" alignment="BASELINE_LEFT" maxHeight="35.0" maxWidth="150.0" mnemonicParsing="false" onAction="#shareAppLink" style="-fx-background-color: transparent;" styleClass="sidebarItem" text="SHARE APP" textFill="WHITE">
-                               <graphic>
-                                   <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                           <Image url="@/SHARE.png" />
-                                       </image>
-                                   </ImageView>
-                               </graphic>
-                               <font>
-                                   <Font name="System Bold" size="14.0" />
-                               </font>
-                           </Button>
-
-                           <Button fx:id="btnAbout" alignment="BASELINE_LEFT" maxHeight="35.0" maxWidth="150.0" mnemonicParsing="false" onAction="#appInfo" style="-fx-background-color: transparent;" styleClass="sidebarItem" text="ABOUT" textFill="WHITE">
-                               <graphic>
-                                   <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                           <Image url="@/ABOUT.png" />
-                                       </image>
-                                   </ImageView>
-                               </graphic>
-                     <font>
-                        <Font name="System Bold" size="14.0" />
-                     </font>
-                           </Button>
-                           <Button fx:id="btnMessage" alignment="BASELINE_LEFT" maxHeight="35.0" maxWidth="150.0" mnemonicParsing="false" onAction="#goToChat_Screen" style="-fx-background-color: transparent;" styleClass="sidebarItem" text="CHAT" textFill="WHITE">
-                               <graphic>
-                                   <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                           <Image url="@/msg.png" />
-                                       </image>
-                                   </ImageView>
-                               </graphic>
-                     <font>
-                        <Font name="System Bold" size="14.0" />
-                     </font>
-                           </Button>
-                  <Button fx:id="btnExit1" alignment="BASELINE_LEFT" maxHeight="35.0" maxWidth="150.0" mnemonicParsing="false" onAction="#closeApp" style="-fx-background-color: transparent;" styleClass="sidebarItem" text="LOG OUT" textFill="WHITE">
-                     <graphic>
-                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@/LOG OUT.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <font>
-                        <Font name="System Bold" size="14.0" />
-                     </font>
-                  </Button>
-                  <MenuButton mnemonicParsing="false" popupSide="LEFT" style="-fx-background-color: TRANSPARENT;" styleClass="sidebarItem" text="POST" textFill="WHITE" wrapText="true">
-                    <items>
-                      <MenuItem mnemonicParsing="false" text="HIGHLIGHT" />
-                      <MenuItem mnemonicParsing="false" text="SHOP" />
-                        <MenuItem mnemonicParsing="false" text="STATUS" />
-                        <MenuItem fx:id="btn_Post" mnemonicParsing="false" text="BIO" />
-                    </items>
-                     <font>
-                        <Font name="System Bold" size="14.0" />
-                     </font>
-                  </MenuButton>
-                       </children>
-                   </VBox>
-               </children>
-           </AnchorPane>
-       
-      <Button fx:id="btnMenuBack" layoutX="8.0" layoutY="21.0" mnemonicParsing="false" onAction="#closeSlider" style="-fx-background-color: TRANSPARENT; -fx-background-radius: 50;" text="MENU">
-         <graphic>
-            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@/MENU.jpg" />
-               </image></ImageView>
-         </graphic>
-         <font>
-            <Font name="System Bold" size="13.0" />
-         </font>
-      </Button>
-      <TextField layoutX="86.0" layoutY="23.0" prefHeight="25.0" prefWidth="180.0" style="-fx-background-radius: 50;" />
-      <Button fx:id="btnSearch_Bar" alignment="CENTER" contentDisplay="CENTER" layoutX="266.0" layoutY="19.0" minWidth="53.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="63.0" style="-fx-background-color: transparent; -fx-background-radius: 35;" text="SEARCH" textFill="#7d7777" />
-   </children>
+        <Button fx:id="btnMenuBack" layoutX="8.0" layoutY="21.0" mnemonicParsing="false" onAction="#closeSlider" style="-fx-background-color: TRANSPARENT; -fx-background-radius: 50;" text="MENU">
+            <graphic>
+                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@/MENU.jpg" />
+                    </image>
+                </ImageView>
+            </graphic>
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Button>
+        <TextField layoutX="86.0" layoutY="23.0" prefHeight="25.0" prefWidth="180.0" style="-fx-background-radius: 50;" />
+        <Button fx:id="btnSearch_Bar" alignment="CENTER" contentDisplay="CENTER" layoutX="266.0" layoutY="19.0" minWidth="53.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="63.0" style="-fx-background-color: transparent; -fx-background-radius: 35;" text="SEARCH" textFill="#7d7777" />
+    </children>
 </AnchorPane>

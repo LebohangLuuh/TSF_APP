@@ -3,16 +3,15 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 import javax.swing.*;
 import java.io.IOException;
-public class TSF_Controller {
+public class TSF_Controller
+{
     @FXML
     private Button btnRegister, btnSignIn;
     @FXML
@@ -26,26 +25,35 @@ public class TSF_Controller {
     @FXML
     private Button company_Btn_Reg;
     @FXML
-    private DatePicker txt_DOB;
+    private CheckBox tickBox;
+    @FXML
+    private Label reg_Feedback;
     @FXML
     protected void getData(ActionEvent actionEvent) {
-      if(txtFullname.getText().isEmpty() ||txtSurname.getText().isEmpty() ||txtEmail.getText().isEmpty() ||txtAddress.getText().isEmpty() ||txtCellphone.getText().isEmpty() ||txtPassword.getText().isEmpty() ||txtConfirmPassword.getText().isEmpty()|| txt_DOB.getValue().toString().isEmpty())
+      if(txtFullname.getText().isEmpty() ||txtSurname.getText().isEmpty() ||txtEmail.getText().isEmpty()||txtPassword.getText().isEmpty() ||txtConfirmPassword.getText().isEmpty())
       {//ALERT THE USER THAT ALL FIELDS MUST BE FILLED!!
-          JOptionPane.showMessageDialog(null,"Please fill all the mandatory fields above!!");
+          reg_Feedback.setTextFill(Color.RED);
+          reg_Feedback.setText("Please fill all the mandatory fields above!!");
+         // JOptionPane.showMessageDialog(null,"Please fill all the mandatory fields above!!");
       }
       else
         if (txtPassword.getText().equals(txtConfirmPassword.getText()))
         {//validate the users input to minimize possible wrong information
-            if(txtFullname.getText().contains("0-9") || txtSurname.getText().contains("0-9") ||txtCellphone.getText().contains("A-Z")||txtCellphone.getText().length()<10||txtCellphone.getText().length()>12 ||!txtEmail.getText().contains(".") ||!txtEmail.getText().contains("@") )
+            if(txtFullname.getText().contains("0-9") || txtSurname.getText().contains("0-9") ||!txtEmail.getText().contains(".") ||!txtEmail.getText().contains("@") )
             {//alert user of any mistakes done!
-                JOptionPane.showMessageDialog(null,"Please provide valid details in order to become a member..");
+                reg_Feedback.setTextFill(Color.RED);
+                reg_Feedback.setText("Please provide valid details in order to become a member..");
+                //JOptionPane.showMessageDialog(null,"Please provide valid details in order to become a member..");
             }
-            else
-            JavaPostgreSql.writeToDatabase(txtFullname.getText(), txtSurname.getText(), txtEmail.getText(), txtCellphone.getText(), txtAddress.getText(), txtPassword.getText(), txt_DOB.getValue());
+            else {
+                JavaPostgreSql.writeToDatabase(txtFullname.getText(), txtSurname.getText(), txtEmail.getText(),txtPassword.getText());
+            }
         }
         else
         {//LET THE USER KNOW THE PASSWORDS DID NOT MATCH
-            JOptionPane.showMessageDialog(null, "The Password and Confirm password did not match!!");
+            reg_Feedback.setTextFill(Color.RED);
+            reg_Feedback.setText("The Passwords did not match!!");
+            //JOptionPane.showMessageDialog(null, "The Password and Confirm password did not match!!");
         }
     }
     public void goToSignInPage() throws IOException {
@@ -80,5 +88,10 @@ public class TSF_Controller {
       {
           JOptionPane.showMessageDialog(null, "The Password and Confirm password did not match!!");
       }
+    }
+    @FXML
+    public void Allow_Registration()// only show the register button after the checkbox is ticked
+    {
+        btnRegister.setVisible(tickBox.isSelected());
     }
  }

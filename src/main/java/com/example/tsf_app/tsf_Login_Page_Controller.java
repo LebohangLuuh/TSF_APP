@@ -1,6 +1,8 @@
 package com.example.tsf_app;
 
 import javafx.animation.TranslateTransition;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,19 +14,19 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.TilePane;
 import javafx.scene.paint.Color;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 import javafx.util.Duration;
 
-import javax.swing.*;
 import java.io.File;
 import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.time.LocalDate;
+import java.util.List;
 import java.util.Optional;
 import java.util.Random;
 import java.util.logging.Level;
@@ -33,10 +35,9 @@ import java.util.logging.Logger;
 import static java.sql.DriverManager.getConnection;
 import static javax.swing.JOptionPane.INFORMATION_MESSAGE;
 import static javax.swing.JOptionPane.showMessageDialog;
-
 public class tsf_Login_Page_Controller {
     @FXML
-    private Label lblCompanyName,lbl_Status_Msg,lbl_Bio_Msg;
+    private Label lblCompanyName,lbl_Status_Msg,lbl_Bio_Msg, lbl_Feedback;
     @FXML
     private Hyperlink sign_Up_Link;
     @FXML
@@ -54,7 +55,7 @@ public class tsf_Login_Page_Controller {
     @FXML
     private Button btnEdit_profile;
     @FXML
-    private TextField txtEmail,txtCompany_Email, txtCompany_Name,txtFullname,txtSurname,txtCellphone,txtAddress;
+    private TextField txtEmail,txtCompany_Email, txtCompany_Name,txtFullname,txtSurname;
     @FXML
     private PasswordField PasswordField,txtCompany_Password;
     @FXML
@@ -65,6 +66,16 @@ public class tsf_Login_Page_Controller {
     private DatePicker txt_DOB, txt_D_O_B;
     @FXML
     private Button btnExit, btnMenuBack, btnMenu, btnShareApp;
+    @FXML
+    private Button btnPost;
+    @FXML
+    private ImageView post_Image;
+    @FXML
+    private Button btnAdd_Img;
+    @FXML
+    private TilePane fileTilePane;
+    @FXML
+    private TextField txt_Cap;
     private Window stage;
     String otpPin;
     private int user_id;
@@ -77,7 +88,9 @@ public class tsf_Login_Page_Controller {
 
         if(txtEmail.getText().isEmpty() || PasswordField.getText().isEmpty())
         {
-            showMessageDialog(null,"Both Password field and Email field \nare mandatory to login!");
+            lbl_Feedback.setTextFill(Color.RED);
+            lbl_Feedback.setText("Both Password field and Email field \nare mandatory to login!");
+           // showMessageDialog(null,"Both Password field and Email field \nare mandatory to login!");
         }
         else
         {//check if the data is available in the database
@@ -99,7 +112,9 @@ public class tsf_Login_Page_Controller {
 
             if(resultSet.next())
             {
-                JOptionPane.showMessageDialog(null,"Login success!");
+                lbl_Feedback.setTextFill(Color.GREEN);
+                lbl_Feedback.setText("Login success!");
+                //JOptionPane.showMessageDialog(null,"Login success!");
                 try
                 {
                     FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("LandingPage.fxml"));
@@ -118,7 +133,9 @@ public class tsf_Login_Page_Controller {
             }
             else
             {
-                showMessageDialog(null,"Ensure that you entered the \ncorrect e-mail and password..");
+                lbl_Feedback.setTextFill(Color.RED);
+                lbl_Feedback.setText("Ensure that you entered the \ncorrect e-mail and password..");
+               // showMessageDialog(null,"Ensure that you entered the \ncorrect e-mail and password..");
             }
             }catch (SQLException ex){
                Logger lgr = Logger.getLogger(JavaPostgreSql.class.getName());
@@ -144,7 +161,6 @@ public class tsf_Login_Page_Controller {
             String organization_Name = txtEmail.getText();
             String organization_Pass = PasswordField.getText();
 
-
             String org_Query = "select * from public.\"organizationDetailsTable\" where \"company_Email\" = ? and \"company_Password\" = ? ";
             try {
                 ps_Org = getConnection(url,user,password).prepareStatement(org_Query);
@@ -157,6 +173,7 @@ public class tsf_Login_Page_Controller {
                 {
                     // lblCompanyName.setText(resultSet_Org.getString("\"company_Name\""));//automatically set company name // causes error
                     showMessageDialog(null,"Login success!");
+
                     try
                     {
                         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Landingpage_Organization.fxml"));
@@ -351,7 +368,6 @@ public class tsf_Login_Page_Controller {
     private Image profileImage;
     //@FXML
     //private Image upload;
-
     //trying to add the background to a pro pic
    /* BackgroundImage backgroundImage = new BackgroundImage(
             new Image("PROFILE.png", 110, 110, true, true),
@@ -413,58 +429,16 @@ public class tsf_Login_Page_Controller {
         });
         });
     }
-   /* public void shareAppLink(ActionEvent event) //share app link for downloading
-    {
-        String appLink = "https://play.google.com/store/apps/details?id=com.Lentswe.android.abc"; // replace with actual app download link
-        String message = "Hey, check out this cool app I found! " + appLink;
-        if (Desktop.isDesktopSupported()) {
-            try {
-                Desktop.getDesktop().browse(new URI(appLink));
-            } catch (IOException | URISyntaxException e) {
-                e.printStackTrace();
-            }
-        }
-        else {
-            Clipboard clipboard = Clipboard.getSystemClipboard();
-            ClipboardContent content = new ClipboardContent();
-            content.putString(message);
-            clipboard.setContent(content);
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Share App Link");
-            alert.setHeaderText(null);
-            alert.setContentText("App link copied to clipboard!");
-            alert.showAndWait();
-        }
-    }*/
     public void handleEditProfile(ActionEvent event) // want to update database with edited details from the profile page
     {
         String userFullname = txtFullname.getText();
         String userSurname = txtSurname.getText();
         String userEmail = txtEmail.getText();
-        String userCellphone = txtCellphone.getText();
-        String userAddress = txtAddress.getText();
-        LocalDate userD_O_B = txt_D_O_B.getValue();
+        //LocalDate userD_O_B = txt_D_O_B.getValue();
 
         UpdateUserDetails updateUserDetails = new UpdateUserDetails();
-        updateUserDetails.editUserDetails(userFullname, userSurname, userEmail, userCellphone, userAddress, userD_O_B);
+        updateUserDetails.editUserDetails(userFullname, userSurname, userEmail);
     }
-    /*@FXML
-    protected void edit_Profile()// go to edit profile page
-    {
-        try{
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/edit_Profile.fxml"));
-            Stage stage = new Stage();
-            Scene scene = new Scene(fxmlLoader.load(), 335, 600);
-            stage.setTitle("UPDATE DETAILS");
-            //change app icon to logo
-            Image image = new Image("logo_transparent_background.png");
-            stage.getIcons().add(image);
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException exc) {
-            throw new RuntimeException(exc);
-        }
-    }*/
   /* @FXML
    public void deleteAccount ()// deleting an account button
     {//database connection
@@ -479,7 +453,7 @@ public class tsf_Login_Page_Controller {
             alert.setHeaderText("Are you sure you want to continue?");
             alert.setContentText("This action cannot be undone.");
 
-            //resizing the with of the msg box
+            //resizing the width of the msg box
             DialogPane dialogPane = alert.getDialogPane();
             dialogPane.getStylesheets().add(getClass().getResource("/alertSizeStyle.css").toExternalForm());
             alert.showAndWait();
@@ -589,18 +563,108 @@ public class tsf_Login_Page_Controller {
             //update_Status_Msg(userId, newStatus); // Pass the user ID and new status to the updateStatus() method
         }
     }
-   /* public void choose_Pic_Upload(ActionEvent event)
+    public void upload_Post(ActionEvent event) // button to push the post to feed screen & add to profile page
     {
-        FileChooser fileChooser = new FileChooser();
-        fileChooser.setTitle("Choose a profile picture");
-        fileChooser.getExtensionFilters().addAll(
-                new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg"));
-        File selectedFile = fileChooser.showOpenDialog(stage);
-        if (selectedFile != null) {
-            upload = new Image(selectedFile.toURI().toString());
-            pic_Upload.setImage(upload);
+        btnPost.setVisible(true);
+    }
+    public void openPost_chooser(ActionEvent event) //go to page to choose the media for a post
+    {
+        try{
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/upload_Post.fxml"));
+            Stage stage = new Stage();
+            Scene scene = new Scene(fxmlLoader.load(), 335, 600);
+            stage.setTitle("CHOOSE MEDIA");
+            //change app icon to logo
+            Image image = new Image("logo_transparent_background.png");
+            stage.getIcons().add(image);
+            stage.setScene(scene);
+            stage.showAndWait();
+        } catch (IOException exc) {
+            throw new RuntimeException(exc);
         }
-    }*/
+    }
+    public void goTo_Feed_Page(ActionEvent event) //go to page to FEEDS PAGE OF the media for POSTED
+    {
+        try{
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/feed_Page.fxml"));
+            Stage stage = new Stage();
+            Scene scene = new Scene(fxmlLoader.load(), 335, 600);
+            stage.setTitle("FEEDS");
+            //change app icon to logo
+            Image image = new Image("logo_transparent_background.png");
+            stage.getIcons().add(image);
+            stage.setScene(scene);
+            stage.showAndWait();
+        } catch (IOException exc) {
+            throw new RuntimeException(exc);
+        }
+    }
+
+    @FXML
+    private void Add_Img_Post(ActionEvent event) //choosing files to be posted from device storage either 1 or more
+    {
+        btnPost.setVisible(false);
+
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Open Image File");
+        fileChooser.getExtensionFilters().addAll(
+                new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg", "*.gif", "*.mp4"));
+        List<File> selectedFiles = fileChooser.showOpenMultipleDialog(null);
+        if (selectedFiles != null && selectedFiles.size() <= 10) {
+            ObservableList<Image> images = FXCollections.observableArrayList();
+            for (File file : selectedFiles) {
+                try {
+                    Image image = new Image(file.toURI().toString());
+                    images.add(image);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+            fileTilePane.getChildren().clear();
+            int numRows = getNumRows(selectedFiles.size());
+            fileTilePane.setPrefRows(numRows);
+            for (Image image : images) {
+                ImageView imageView = new ImageView();
+                //making the imageview resize with the number of file selected
+                if (numRows == 1)
+                {
+                    imageView.setFitWidth(250);
+                    imageView.setFitHeight(200);
+                } else if (numRows == 2)
+                {
+                    imageView.setFitWidth(125);
+                    imageView.setFitHeight(200);
+                }else if (numRows > 2)
+                {
+                    imageView.setFitWidth(80);
+                    imageView.setFitHeight(120);
+                }
+                else
+                {
+                    imageView.setFitWidth(80);
+                    imageView.setFitHeight(80);
+                }
+                imageView.setImage(image);
+
+                fileTilePane.getChildren().add(imageView);
+            }
+        }
+        btnAdd_Img.setVisible(false);
+        btnPost.setVisible(true);
+    }
+    private int getNumRows(int numFiles) //checking the number of selected files from the device and allocate enough memory
+    {
+        if (numFiles < 4)
+        {
+            return numFiles;
+        } else if (numFiles <= 6) {
+            return 3;
+        } else if (numFiles <= 8) {
+            return 4;
+        } else {
+            return 5;
+        }
+    }
     /* @FXML // taking the status msg and profile pic into the database of user_Profile
     private void update_Status_Msg(int userId, String newStatus) throws SQLException {
         String url = "jdbc:postgresql://localhost:5432/tsf_Database"; //est connection

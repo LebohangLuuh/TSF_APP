@@ -27,7 +27,7 @@
       <TextField layoutX="155.0" layoutY="187.0" promptText="EMAIL" />
       <TextField layoutX="155.0" layoutY="337.0" promptText="ADDRESS" />
       <TextField layoutX="155.0" layoutY="300.0" promptText="MOBILE NUMBER" />
-      
+
       <PasswordField layoutX="155.0" layoutY="374.0" prefHeight="25.0" prefWidth="151.0" promptText="PASSWORD" />
       <PasswordField layoutX="155.0" layoutY="409.0" prefHeight="25.0" prefWidth="151.0" promptText="CONFIRM PASSWORD" />
       <Button fx:id="company_Btn_Reg" layoutX="52.0" layoutY="465.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="240.0" style="-fx-background-radius: 50;" text="REGISTER">

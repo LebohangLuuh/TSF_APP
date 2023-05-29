@@ -1,5 +1,4 @@
 package com.example.tsf_app;
-
 import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -16,6 +15,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
@@ -26,7 +27,6 @@ import java.net.URL;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
-
 public class chat_Controller implements Initializable
 {
     @FXML
@@ -44,8 +44,7 @@ public class chat_Controller implements Initializable
     public void initialize(URL location, ResourceBundle resources)
     {
         LocalDateTime now = LocalDateTime.now();
-        String timeStamp = now.format(DateTimeFormatter.ofPattern("dd MMMM YYYY -  HH:mm:ss"));
-        lblDate.setText(timeStamp);
+        String timeStamp = now.format(DateTimeFormatter.ofPattern("HH:mm"));
 
         try {
             client = new Client(new Socket("localhost",5432));
@@ -69,16 +68,23 @@ public class chat_Controller implements Initializable
             String msgToSend = txt_Type_Msg.getText(); // removing spaces so that users don't send empty messages
             if (!msgToSend.isEmpty())
             {
+
                 HBox hBox = new HBox();
                 hBox.setAlignment(Pos.CENTER_LEFT);
                 hBox.setPadding(new Insets(5,5,5,10));
 
-                Text text = new Text(msgToSend);
-                TextFlow textFlow = new TextFlow(text);
+                Text msgText = new Text(msgToSend);
+                msgText.setFont(Font.getDefault()); // set the default font for the message text
+                msgText.setFill(Color.WHITE); // set the text color
 
-                textFlow.setStyle("-fx-border-color:blue ;-fx-border-radius: 50;");//colors to be changed later on
+                Text newtimeStamp = new Text(timeStamp); // create a new Text object for the timestamp
+                newtimeStamp.setFont(Font.font(8)); // set the font size
+                newtimeStamp.setFill(Color.GREENYELLOW); // set the text color
+
+                TextFlow textFlow = new TextFlow(msgText, new Text("\n"), newtimeStamp); // add the timestamp to the TextFlow
+
+                textFlow.setStyle("-fx-background-color: #192841FF;-fx-background-radius: 20;-fx-border-radius: 25;-fx-border-color: white");//colors to be changed later on
                 textFlow.setPadding(new Insets(5,10,5,10));
-                //text.setFill(Color.color(0.934,0.945,0.996));
 
                 hBox.getChildren().add(textFlow);
                 vbox_Msg.getChildren().add(hBox);
@@ -97,7 +103,7 @@ public class chat_Controller implements Initializable
         Text text = new Text(msgFromServer);
         TextFlow textFlow = new TextFlow(text);
 
-        textFlow.setStyle("-fx-border-color:blue; -fx-border-radius-radius:50");//colors to be changed later on
+        textFlow.setStyle("-fx-border-color:green; -fx-border-radius-radius:50");
         textFlow.setPadding(new Insets(5,10,5,10));
         // text.setFill(Color.color(0.934,0.945,0.996));
 
