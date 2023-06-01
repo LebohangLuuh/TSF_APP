@@ -35,7 +35,8 @@ import java.util.logging.Logger;
 import static java.sql.DriverManager.getConnection;
 import static javax.swing.JOptionPane.INFORMATION_MESSAGE;
 import static javax.swing.JOptionPane.showMessageDialog;
-public class tsf_Login_Page_Controller {
+public class tsf_Login_Page_Controller
+{
     @FXML
     private Label lblCompanyName,lbl_Status_Msg,lbl_Bio_Msg, lbl_Feedback;
     @FXML
@@ -62,8 +63,6 @@ public class tsf_Login_Page_Controller {
     private ImageView img_User_Profile,pic_Upload;
     @FXML
     private AnchorPane slider;
-    @FXML
-    private DatePicker txt_DOB, txt_D_O_B;
     @FXML
     private Button btnExit, btnMenuBack, btnMenu, btnShareApp;
     @FXML
@@ -396,6 +395,7 @@ public class tsf_Login_Page_Controller {
     }
     @FXML
     protected void openSlider() {
+        slider.setVisible(true);
         if (slider!=null)
             slider.setTranslateX(-180);
         btnMenu.setOnAction(event -> {
@@ -414,7 +414,8 @@ public class tsf_Login_Page_Controller {
     }
     @FXML
     protected void closeSlider() {
-           // slider.setTranslateX(-180);
+        slider.setVisible(true);
+        // slider.setTranslateX(-180);
         btnMenuBack.setOnAction(event -> {
             TranslateTransition slide = new TranslateTransition();
             slide.setDuration(Duration.seconds(0.3));
@@ -586,7 +587,7 @@ public class tsf_Login_Page_Controller {
     public void goTo_Feed_Page(ActionEvent event) //go to page to FEEDS PAGE OF the media for POSTED
     {
         try{
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/feed_Page.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("LandingPage.fxml"));
             Stage stage = new Stage();
             Scene scene = new Scene(fxmlLoader.load(), 335, 600);
             stage.setTitle("FEEDS");
@@ -599,7 +600,6 @@ public class tsf_Login_Page_Controller {
             throw new RuntimeException(exc);
         }
     }
-
     @FXML
     private void Add_Img_Post(ActionEvent event) //choosing files to be posted from device storage either 1 or more
     {

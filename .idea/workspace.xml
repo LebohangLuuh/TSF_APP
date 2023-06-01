@@ -7,15 +7,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4cfee05-a83c-4b43-b3b3-4f79031f6e6b" name="Changes" comment="progress on the login APP on 31 May 2023 changed the register,POSTING PAGE to adjust with number of files selected and database">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/feed_Page.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+    <list default="true" id="d4cfee05-a83c-4b43-b3b3-4f79031f6e6b" name="Changes" comment="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/sonarlint/issuestore/index.pb&#10;#&#9;.idea/sonarlint/securityhotspotstore/index.pb&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/java/com/example/tsf_app/tsf_Login_Page_Controller.java&#10;#&#9;src/main/resources/com/example/tsf_app/LandingPage.fxml&#10;#&#9;src/main/resources/upload_Post.fxml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/LandingPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/LandingPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/tsf_Login_Page_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tsf_app/tsf_Login_Page_Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/chat_Page.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/chat_Page.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tsf_app/LandingPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tsf_app/LandingPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/upload_Post.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/upload_Post.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/feed_Page.fxml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,7 +215,7 @@ alter table &quot;userDetails&quot;
       <workItem from="1685370114548" duration="215000" />
       <workItem from="1685428282020" duration="18339000" />
       <workItem from="1685515259948" duration="25161000" />
-      <workItem from="1685601604925" duration="7945000" />
+      <workItem from="1685601604925" duration="11608000" />
     </task>
     <task id="LOCAL-00001" summary="progress on the login page without password hiding">
       <created>1683532933847</created>
@@ -332,7 +329,28 @@ alter table &quot;userDetails&quot;
       <option name="project" value="LOCAL" />
       <updated>1685543182662</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="progress on the login APP on 31 May 2023 changed the register,POSTING PAGE to adjust with number of files selected and database">
+      <created>1685616954840</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1685616954840</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/sonarlint/issuestore/index.pb&#10;#&#9;.idea/sonarlint/securityhotspotstore/index.pb&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/java/com/example/tsf_app/tsf_Login_Page_Controller.java&#10;#&#9;src/main/resources/com/example/tsf_app/LandingPage.fxml&#10;#&#9;src/main/resources/upload_Post.fxml">
+      <created>1685617143629</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1685617143629</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/sonarlint/issuestore/index.pb&#10;#&#9;.idea/sonarlint/securityhotspotstore/index.pb&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/java/com/example/tsf_app/tsf_Login_Page_Controller.java&#10;#&#9;src/main/resources/com/example/tsf_app/LandingPage.fxml&#10;#&#9;src/main/resources/upload_Post.fxml">
+      <created>1685622610433</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1685622610433</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -422,7 +440,8 @@ alter table &quot;userDetails&quot;
     <MESSAGE value="progress on the login page without password hiding on 30 may 2023 changed the register and database" />
     <MESSAGE value="progress on the login APP on 31 May 2023 changed the register,POSTING PAGE and database" />
     <MESSAGE value="progress on the login APP on 31 May 2023 changed the register,POSTING PAGE to adjust with number of files selected and database" />
-    <option name="LAST_COMMIT_MESSAGE" value="progress on the login APP on 31 May 2023 changed the register,POSTING PAGE to adjust with number of files selected and database" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/sonarlint/issuestore/index.pb&#10;#&#9;.idea/sonarlint/securityhotspotstore/index.pb&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/java/com/example/tsf_app/tsf_Login_Page_Controller.java&#10;#&#9;src/main/resources/com/example/tsf_app/LandingPage.fxml&#10;#&#9;src/main/resources/upload_Post.fxml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/sonarlint/issuestore/index.pb&#10;#&#9;.idea/sonarlint/securityhotspotstore/index.pb&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/java/com/example/tsf_app/tsf_Login_Page_Controller.java&#10;#&#9;src/main/resources/com/example/tsf_app/LandingPage.fxml&#10;#&#9;src/main/resources/upload_Post.fxml" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

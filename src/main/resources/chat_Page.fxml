@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="chat_App" prefHeight="600.0" prefWidth="335.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tsf_app.chat_Controller">
+<AnchorPane fx:id="chat_App" prefHeight="600.0" prefWidth="335.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tsf_app.chat_Controller">
    <children>
       <Button fx:id="send_Msg" layoutX="278.0" layoutY="562.0" prefHeight="25.0" prefWidth="46.0" style="-fx-background-color: transparent;">
          <graphic>
